@@ -1,6 +1,6 @@
 <?php
 date_default_timezone_set ( 'Europe/Oslo' );
-class myDB {
+class databasehelper {
 	protected $db;
 	function __construct($strDSN, $strUser, $strPassword) {
 		try {
