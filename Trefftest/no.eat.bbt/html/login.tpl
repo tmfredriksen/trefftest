@@ -1,4 +1,7 @@
 
+{if (isset($melding))}
+<h3>{$melding}</h3>
+{/if}
 <!--Skjema for innlogging-->
 <blockquote>
 <h1>Logg inn:</h1>
@@ -24,6 +27,4 @@
       </table>
   </form>
   <br/>
-  <hr/>
-  <h1>Registrer deg:</h1>
 </blockquote>
