@@ -1,10 +1,10 @@
 <?php
 // Koden for login-siden
-include_once ('../libs/Smarty.class.php');
-include_once ('Bruker.class.php');
+include_once ('libs/Smarty.class.php');
+include_once ('Classes/Bruker.class.php');
 include_once ('init.php');
-include_once ('../Repository/DatabaseHelper.class.php');
-include_once ('../Repository/HashHelper.php');
+include_once ('Repository/DatabaseHelper.class.php');
+include_once ('Repository/HashHelper.php');
 
 // http://stackoverflow.com/questions/60174/how-can-i-prevent-sql-injection-in-php?rq=1
 
@@ -31,9 +31,10 @@ if (! (isset ( $_SESSION ['loggedIn'] ) && $_SESSION ['loggedIn'])) {
 				$_SESSION['username'] = strip_tags($user->getNavn());
 				$_SESSION['loggedIn'] = true;
 				$_SESSION['isAdmin'] = $user->getIsAdmin();
+				header("location: index.php");
 			} else {
 				$this->smarty->assign ( 'melding', 'Feil brukernavn eller passord!' );
-				return null;
+
 			}
 		} else {
 			$smarty->assign ( 'melding', 'Alle felt må være utfylt' );
