@@ -1,23 +1,33 @@
 <?php
-date_default_timezone_set ( 'Europe/Oslo' );
 
-include_once ('../Classes/Bruker.class.php');
+include_once ('../no.eat.bbt/Classes/Bruker.class.php');
 include_once ('HashHelper.php');
 class databasehelper {
 	
-	private $db;
+	private $host;
+	private $username;
+	private $password;
+	private $dbname;
 	
 	function __construct($host, $username, $password, $dbname) {
-		$this->db = new mysqli ( $host, $username, $password, $dbname );
-		
-		if ($this->db->connect_error) {
-			die ( 'Connect Error (' . $this->db->connect_errno . ') ' . $this->db->connect_error );
-		}
+	    $this->host = $host;
+	    $this->username = $username;
+	    $this->password = $password;
+	    $this->dbname = $dbname;
+
 	}
 	
 	public function getUser($epost) {
-		$stmt = $this->db->prepare ( "SELECT Navn, Telefon, Passord, Salt, isAdmin FROM Bruker WHERE Epost=?" );
-		$brukerid = $this->db->real_escape_string ( $epost ); // Vasker input
+	    
+	    
+	    $db = new mysqli ( $this->host, $this->username, $this->password, $this->dbname );
+		if ($db->connect_error) {
+			die ( 'Connect Error (' . $db->connect_errno . ') ' . $db->connect_error );
+	
+		}
+
+		$stmt = $db->prepare ( "SELECT Navn, Telefon, Passord, Salt, isAdmin FROM Bruker WHERE Epost=?" );
+		$brukerid = $db->real_escape_string ( $epost ); // Vasker input
 		$stmt->bind_param ( 's', $brukerid );
 		
 		$stmt->bind_result ( $dbnavn, $dbtelefon, $dbpassord, $dbsalt, $dbadmin );
@@ -25,11 +35,12 @@ class databasehelper {
 		
 		// Hvis denne feiler finnes ikke brukerid'en i tabellen
 		if ($stmt->fetch ()) {
-			
+
 			$user = new Bruker ( $dbnavn, $brukerid, $dbtelefon, $dbpassord, $dbsalt, $dbadmin );
+			return $user;
 			
 		} else {
-			$this->smarty->assign ( 'melding', 'Ukjent brukernavn!' );
+
 			return null;
 		}
 	}

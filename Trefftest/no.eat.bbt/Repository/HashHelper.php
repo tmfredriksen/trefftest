@@ -8,7 +8,6 @@ function checkHash($passwd, $salt) {
 		$salt = substr($salt, 0, 6);
 	}
 
-	echo(hash('sha256', ($salt . $passwd)));
 	return hash('sha256', ($salt . $passwd));
 }
 
