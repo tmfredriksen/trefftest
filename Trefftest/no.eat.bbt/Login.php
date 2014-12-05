@@ -40,9 +40,9 @@ if (! (isset ( $_SESSION ['loggedIn'] ) && $_SESSION ['loggedIn'])) {
 			$smarty->assign ( 'melding', 'Alle felt må være utfylt' );
 		}
 	}
-	$smarty->display ( '../html/login.tpl' );
+	$smarty->display ( 'html/login.tpl' );
 } else {
 	$smarty->assign ( 'melding', 'Du er allerede logget inn!' );
-	$smarty->display ( '../html/logout.tpl' );
+	$smarty->display ( 'html/logout.tpl' );
 }
 ?>
