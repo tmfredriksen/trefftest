@@ -1,5 +1,5 @@
 <html>
 <p>hei! velkommen til index</p>
 <hr/>
-<a href="login.php">Logg inn</a>
+<a href="Login.php">Logg inn</a>
 </html>
