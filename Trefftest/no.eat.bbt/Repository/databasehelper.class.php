@@ -10,10 +10,10 @@ class databasehelper {
 	private $dbname = "TMKF_DB1";
 	
 	function __construct() {
+		
 	}
 	
 	public function getUser($epost) {
-	    
 	    
 	    $db = new mysqli ( $this->host, $this->username, $this->password, $this->dbname );
 		if ($db->connect_error) {
@@ -38,6 +38,18 @@ class databasehelper {
 
 			return null;
 		}
+	}
+	
+	public function getTreffForGodkjenning() {
+		$db = new mysqli ( $this->host, $this->username, $this->password, $this->dbname );
+		if ($db->connect_error) {
+			die ( 'Connect Error (' . $db->connect_errno . ') ' . $db->connect_error );
+		
+		}
+		
+		$resultat = $db->query("SELECT * FROM Treff WHERE isOk = 0");
+		
+		return $resultat;
 	}
 }
 ?>
