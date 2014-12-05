@@ -15,36 +15,36 @@ class Bruker {
 		$this->isAdmin = $isAdmin;
 	}
 	public function getNavn() {
-		return $Navn;
+		return $this->Navn;
 	}
 	public function setNavn($Navn) {
 		$this->Navn = $Navn;
 	}
 	public function getEpost() {
-		return $Epost;
+		return $this->Epost;
 	}
 	public function setEpost($Epost) {
 		$this->Epost = $Epost;
 	}
 	public function getTelefon() {
-		return $Telefon;
+		return 	$this->Telefon;
 	}
 	public function setTelefon($Telefon) {
 		$this->Telefon = $Telefon;
 	}
 	public function getPassord() {
-		return $Passord;
+		return $this->Passord;
 	}
 	public function setPassord() {
 		$this->Passord = $Passord;
 	}
 	public function getSalt() {
-		return $Salt;
+		return $this->Salt;
 	}
 	public function setSalt($Salt) {
 		$this->Salt = $Salt;
 	}
 	public function getIsAdmin() {
-		return $isAdmin;
+		return $this->isAdmin;
 	}
 }
