@@ -13,6 +13,8 @@ class Bruker {
 		$this->Passord = $Passord;
 		$this->Salt = $Salt;
 		$this->isAdmin = $isAdmin;
+		$this->ipAdresse = $_SERVER["REMOTE_ADDR"];
+		$this->userAgent = $_SERVER['HTTP_USER_AGENT'];
 	}
 	public function getNavn() {
 		return $this->Navn;
@@ -46,5 +48,15 @@ class Bruker {
 	}
 	public function getIsAdmin() {
 		return $this->isAdmin;
+	}
+	
+	public function verify() {
+		if(($this->ipAdresse == $_SERVER["REMOTE_ADDR"])
+				&& ($this->userAgent == $_SERVER['HTTP_USER_AGENT'] )){
+			return true;
+		}
+		else
+			return false;
+			
 	}
 }
