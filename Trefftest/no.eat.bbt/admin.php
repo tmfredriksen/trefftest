@@ -19,7 +19,7 @@ if(isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'])
 			$treffliste = $databasehelper->getTreffForGodkjenning();
 			
 			$smarty->assign('treffliste', $treffliste);
-		
+			$smarty->display('html/admin.tpl');
 		}
 		else {
 			

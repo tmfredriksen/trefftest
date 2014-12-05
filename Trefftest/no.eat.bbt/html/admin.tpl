@@ -1,5 +1,5 @@
 {foreach key=key from=$treffliste item=treff}
 
-        <li>{$treff.tittel}</li>   Halla balla     
+        <li>{$treff.Treffnavn}</li>   Halla balla     
         <hr/>
 {/foreach}
