@@ -1,5 +1,5 @@
-{include file='header.tpl'}
-{include file='navbar.tpl'}
+{include file='html/header.tpl'}
+{include file='html/navbar.tpl'}
 
 <p>hei! velkommen til index</p>
 <hr/>
@@ -7,4 +7,4 @@
 
 
 
-{include file='footer.tpl'}
+{include file='html/footer.tpl'}
