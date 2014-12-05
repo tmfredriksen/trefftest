@@ -4,17 +4,12 @@ include_once ('../no.eat.bbt/Classes/Bruker.class.php');
 include_once ('HashHelper.php');
 class databasehelper {
 	
-	private $host;
-	private $username;
-	private $password;
-	private $dbname;
+	private $host = "Kark.hin.no";
+	private $username = "tordm";
+	private $password = "tordm123";
+	private $dbname = "TMKF_DB1";
 	
-	function __construct($host, $username, $password, $dbname) {
-	    $this->host = $host;
-	    $this->username = $username;
-	    $this->password = $password;
-	    $this->dbname = $dbname;
-
+	function __construct() {
 	}
 	
 	public function getUser($epost) {

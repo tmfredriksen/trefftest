@@ -17,7 +17,7 @@ if (! (isset ( $_SESSION ['loggedIn'] ) && $_SESSION ['loggedIn'])) {
 		if ((isset ( $_POST ['usern'] ) ? $_POST ['usern'] : '') && (isset ( $_POST ['passwd'] ) ? $_POST ['passwd'] : '')) {
 			$usern = strip_tags ( $_POST ['usern'] );
 			$passwd = strip_tags ( $_POST ['passwd'] ); // Fjener evt. tagger
-			$databasehelper = new DatabaseHelper ( "bobiltreff.no.mysql", "bobiltreff_no", "hWm3yBSw", "bobiltreff_no" );
+			$databasehelper = new DatabaseHelper ();
 			$user = $databasehelper->getUser ( $usern );
 			if (!is_null($user)) {
 

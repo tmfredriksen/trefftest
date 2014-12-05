@@ -1,9 +1,19 @@
 <?php
-date_default_timezone_set ( 'Europe/Oslo' );
-require_once ('libs/Smarty.class.php');
 
-$smarty = new Smarty ();
-$smarty->display ( 'html/login.tpl' );
-
+if(isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'])
+{
+	if(isset($_SESSION["user"]) && $_SESSION['user']->verify()) {
+		if($_SESSION['isAdmin']) 
+		{
+			
+			
+			
+			
+		}
+		else {
+			
+		}
+	}
+}
 ?>
 
