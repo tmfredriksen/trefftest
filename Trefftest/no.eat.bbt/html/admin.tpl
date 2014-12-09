@@ -1,26 +1,26 @@
-<!DOCTYPE html>
-{in
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap 101 Template</title>
-    <table
-{foreach key=key from=$treffliste item=treff}
-	
-        <li>{$treff.Treffnavn}</li>   
-        <hr/>
-{/foreach}
-    <!-- Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+{include file='html/header.tpl'}
 
-   
-  </head>
-  <body>
-    <h1>Hello, world!</h1>
+<h1>Treff til godkjenning</h1>
 
-   
-    <script src="js/bootstrap.min.js"></script>
-  </body>
-</html>
+<div class="col">
+{if ($treffliste) }
+<table>
+	{foreach key=key from=$treffliste item=treff}
+	<tr>
+		<th>
+			{$treff->getTreffNavn()}
+		</th>
+		<th>
+			<a href="visTreffAdmin.php?treffId={$treff->getId()}"><button class="btn btn-danger">Slett treff</button></a>
+			<a href="visTreffAdmin.php?treffId={$treff->getId()}"><button class="btn btn-info">Vis info...</button></a>
+			<a href="admin.php?godkjennTreffId={$treff->getId()}"><button class="btn btn-success">Godkjenn og publiser</button></a>
+		</th>
+	</tr>
+	{/foreach}
+</table>
+{else}
+	<p>Ingen elementer.</p>
+{/if}
+</div>
+
+{include file='html/footer.tpl'}

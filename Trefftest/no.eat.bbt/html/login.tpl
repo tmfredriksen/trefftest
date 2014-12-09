@@ -1,4 +1,5 @@
-
+{include file='html/header.tpl'}
+{include file='html/navbar.tpl'}
 {if (isset($melding))}
 <h3>{$melding}</h3>
 {/if}
@@ -28,3 +29,4 @@
   </form>
   <br/>
 </blockquote>
+{include file='html/footer.tpl'}

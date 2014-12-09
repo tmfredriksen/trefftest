@@ -16,15 +16,31 @@ if(isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'])
 			
 			$databasehelper = new databasehelper();
 			
-			$treffliste = $databasehelper->getTreffForGodkjenning();
+			if (isset($_GET["godkjennTreffId"])) {
+				$treffId = $_GET["godkjennTreffId"];
+				
+				$databasehelper->godkjennTreff($treffId);
+
+				header("location: admin.php");
+				
+			}
+			else{
+				$treffliste = $databasehelper->getTreffForGodkjenning();
+					
+				$smarty->assign('treffliste', $treffliste);
+				$smarty->display('html/admin.tpl');
+			}
 			
-			$smarty->assign('treffliste', $treffliste);
-			$smarty->display('html/admin.tpl');
 		}
 		else {
-			
+			header("location: index.php");
 		}
 	}
+	else {
+		header("location: index.php");
+	}
+}
+else {
+	header("location: Login.php");
 }
 ?>
-

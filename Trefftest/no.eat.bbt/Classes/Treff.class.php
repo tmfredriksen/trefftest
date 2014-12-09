@@ -1,5 +1,6 @@
 <?php
 class Treff {
+	private $Id;
 	private $Treffnavn;
 	private $Startdato;
 	private $Sluttdato;
@@ -11,11 +12,12 @@ class Treff {
 	private $Beskrivelse;
 	private $Paameldingsfrist;
 	private $Stromplasser;
+	private $Strompris;
 	private $isOk;
 	private $RegionID;
 	private $BrukerID;
 	
-	function __construct($Treffnavn, $Startdato, $Sluttdato, $Sted, $Koordinater, $Plasser, $Treffavgift, $Kontonr, $Beskrivelse, $Paameldingsfrist, $Stromplasser, $isOk, $RegionID, $BrukerID) {
+	function __construct($Treffnavn, $Startdato, $Sluttdato, $Sted, $Koordinater, $Plasser, $Treffavgift, $Kontonr, $Beskrivelse, $Paameldingsfrist, $Stromplasser, $Strompris, $isOk, $RegionID, $BrukerID) {
 		$this->Treffnavn = $Treffnavn;
 		$this->Startdato = $Startdato;
 		$this->Sluttdato = $Sluttdato;
@@ -27,10 +29,19 @@ class Treff {
 		$this->Beskrivelse = $Beskrivelse;
 		$this->Paameldingsfrist = $Paameldingsfrist;
 		$this->Stromplasser = $Stromplasser;
+		$this->Strompris = $Strompris;
 		$this->isOk = $isOk;
 		$this->RegionID = $RegionID;
 		$this->BrukerID = $BrukerID;
 	}
+	
+	public function getId() {
+		return $this->Id;
+	}
+	public function setId($value) {
+		$this->Id = $value;
+	}
+	
 	public function getTreffnavn() {
 		return $this->Treffnavn;
 	}
@@ -97,6 +108,12 @@ class Treff {
 	public function setStromplasser($value) {
 		$this->Stromplasser = $value;
 	}
+	public function getStrompris() {
+		return $this->Strompris;
+	}
+	public function setStrompris($value) {
+		$this->Strompris = $value;
+	}
 	public function getisOk() {
 		return $this->isOk;
 	}
@@ -114,6 +131,14 @@ class Treff {
 	}
 	public function setBrukerID($value) {
 		$this->BrukerID = $value;
+	}
+	
+	public function toString() {
+		return "Navn: " . $this->Treffnavn . " | Sted: " . $this->Sted . " | Fra: " . $this->Startdato
+		. " | Til: " . $this->Sluttdato . " | Antall plasser: " . $this->Plasser . " | Treffavgift: kr"
+		. $this->Treffavgift . " til konto: " . $this->Kontonr . " | Påmeldingsfrist: "
+		. $this->Paameldingsfrist . " | Antall strømplasser: " . $this->Stromplasser
+		. " | Pris per døgn: " . $this->Strompris;
 	}
 }
 ?>

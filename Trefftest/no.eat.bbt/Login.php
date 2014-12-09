@@ -34,7 +34,7 @@ if (! (isset ( $_SESSION ['loggedIn'] ) && $_SESSION ['loggedIn'])) {
     				header("location: index.php");
     				
     			} else {
-    				$this->smarty->assign ( 'melding', 'Feil brukernavn eller passord!' );
+    				$smarty->assign ( 'melding', 'Feil brukernavn eller passord!' );
 
     			}
 			}

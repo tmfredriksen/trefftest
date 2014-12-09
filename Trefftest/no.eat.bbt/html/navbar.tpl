@@ -42,4 +42,4 @@
         </div><!--/.nav-collapse -->
       </div>
     </div>
-    </br>
+    <br/>
