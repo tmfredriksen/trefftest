@@ -13,7 +13,7 @@
 <link href="css/bootstrap.css" rel="stylesheet">
 
 <!-- stilark fra bootstrap eksempler -->
-<link href="css/jumbotron.css" rel="stylesheet">
+<!--<link href="css/jumbotron.css" rel="stylesheet">-->
 </head>
 
 <body>
