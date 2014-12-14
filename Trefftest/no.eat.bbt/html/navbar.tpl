@@ -27,11 +27,9 @@
 						<li><a href="">Region Vest</a></li>
 						<li><a href="">Region Sør</a></li>
 						<li><a href="">Region Øst</a></li>
-
-
-						<li class="dropdown-header">Rediger konto</li>
+						<li class="dropdown-header">Brukere</li>
 						<li><a href="edit.php">Kontoinnstillinger</a></li>
-						<li><a href="password_reset.php">Resett passord</a></li>
+						<li><a href="password_reset.php">Opprett Bruker</a></li>
 
 					</ul></li>
 				<li><div class="input-lg">

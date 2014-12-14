@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.21-dev, created on 2014-12-13 19:00:35
+<?php /* Smarty version Smarty-3.1.21-dev, created on 2014-12-14 10:46:43
          compiled from "html\index.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:6235548c557b48ab69-71525626%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '30d81b4648d095b5091327f21a76e338fe0ab4f9' => 
     array (
       0 => 'html\\index.tpl',
-      1 => 1418493633,
+      1 => 1418550324,
       2 => 'file',
     ),
   ),
@@ -33,7 +33,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 	
 	<br/>
 	<div style="margin-top:-10%; padding-left: 40%;">Hvordan bruke
-		siden ? Trykk på din Region og alle treff som er registrert vil da
+		siden ? Trykk på mer og din Region og alle treff som er registrert vil da
 		vises. Trykk deretter på det treff som dere ønsker å melde dere på og
 		fyll inn de opplysninger som det spørres etter.</div>
 </body>
