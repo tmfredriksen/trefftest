@@ -1,5 +1,7 @@
 {include file='html/header.tpl'}
-
+{include file='html/navbar.tpl'}
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<br/><br/>
 <table>
 	<tr>
 		<th>Navn: 
@@ -37,7 +39,7 @@
 		</th>
 	</tr>
 		<tr>
-		<th>Påmeldingsfrist: 
+		<th>PÃ¥meldingsfrist: 
 		</th>
 		<th>
 		{$treff->getPaameldingsfrist()}
@@ -72,14 +74,14 @@
 		</th>
 	</tr>
 	<tr>
-		<th>Antall plasser med strøm: 
+		<th>Antall plasser med strÃ¸m: 
 		</th>
 		<th>
 		{$treff->getStromplasser()}
 		</th>
 	</tr>
 	<tr>
-		<th>Strømpris pr døgn: 
+		<th>StrÃ¸mpris pr dÃ¸gn: 
 		</th>
 		<th>
 		{$treff->getStrompris()}

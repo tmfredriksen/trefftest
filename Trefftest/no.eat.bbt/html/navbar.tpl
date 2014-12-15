@@ -18,16 +18,17 @@
 				<li><a href="index.php">Startside</a></li>
 				<li><a href="om.php">Om</a></li>
 				<li><a href="Login.php">Logg inn</a></li>
-				<li><a href="">Region Nord</a></li>
-				<li><a href="">Region Nordland</a></li>
-				<li><a href="">Region Midt</a></li>
-				<li><a href="">Region Vest</a></li>
-				<li><a href="">Region Sør</a></li>
-				<li><a href="">Region Øst</a></li>
+				<li><a href="nord.php">Region Nord</a></li>
+				<li><a href="nordland.php">Region Nordland</a></li>
+				<li><a href="midt.php">Region Midt</a></li>
+				<li><a href="vest.php">Region Vest</a></li>
+				<li><a href="soer.php">Region Sør</a></li>
+				<li><a href="oest.php">Region Øst</a></li>
 				<li class="dropdown"><a href="#" class="dropdown-toggle"
 					data-toggle="dropdown">Mer <b class="caret"></b></a>
 					<ul class="dropdown-menu">
 						<li><a href="">Registrere nye treff</a></li>
+						<li><a href="admin.php">Treff til godkjenning</a></li>
 						<li class="dropdown-header">Brukere</li>
 						<li><a href="">Kontoinnstillinger</a></li>
 						<li><a href="register.php">Opprett Bruker</a></li>

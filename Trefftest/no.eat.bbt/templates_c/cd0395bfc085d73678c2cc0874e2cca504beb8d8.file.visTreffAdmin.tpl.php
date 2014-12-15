@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.21-dev, created on 2014-12-15 16:41:54
+<?php /* Smarty version Smarty-3.1.21-dev, created on 2014-12-15 17:11:56
          compiled from "html\visTreffAdmin.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:6367548f0142ea74d2-16089370%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'cd0395bfc085d73678c2cc0874e2cca504beb8d8' => 
     array (
       0 => 'html\\visTreffAdmin.tpl',
-      1 => 1418233619,
+      1 => 1418659912,
       2 => 'file',
     ),
   ),
@@ -15,17 +15,20 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.21-dev',
+  'unifunc' => 'content_548f01430cc721_06722273',
   'variables' => 
   array (
     'treff' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.21-dev',
-  'unifunc' => 'content_548f01430cc721_06722273',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_548f01430cc721_06722273')) {function content_548f01430cc721_06722273($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ('html/header.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
 
+<?php echo $_smarty_tpl->getSubTemplate ('html/navbar.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<br/><br/>
 <table>
 	<tr>
 		<th>Navn: 
@@ -68,7 +71,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 		</th>
 	</tr>
 		<tr>
-		<th>Påmeldingsfrist: 
+		<th>PÃ¥meldingsfrist: 
 		</th>
 		<th>
 		<?php echo $_smarty_tpl->tpl_vars['treff']->value->getPaameldingsfrist();?>
@@ -108,7 +111,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 		</th>
 	</tr>
 	<tr>
-		<th>Antall plasser med strøm: 
+		<th>Antall plasser med strÃ¸m: 
 		</th>
 		<th>
 		<?php echo $_smarty_tpl->tpl_vars['treff']->value->getStromplasser();?>
@@ -116,7 +119,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 		</th>
 	</tr>
 	<tr>
-		<th>Strømpris pr døgn: 
+		<th>StrÃ¸mpris pr dÃ¸gn: 
 		</th>
 		<th>
 		<?php echo $_smarty_tpl->tpl_vars['treff']->value->getStrompris();?>
