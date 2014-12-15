@@ -1,5 +1,6 @@
 {include file='html/header.tpl'}
-
+{include file='html/navbar.tpl'}
+<br />
 <h1>Treff til godkjenning</h1>
 
 <div class="col">

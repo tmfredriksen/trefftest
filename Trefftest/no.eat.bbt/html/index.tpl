@@ -9,10 +9,11 @@
 			alt="" style="padding-left:10%">
 	
 	<br/>
-	<div style="margin-top:-10%; padding-left: 40%;">Hvordan bruke
-		siden ? Trykk på mer og din Region og alle treff som er registrert vil da
+	<div style="margin-top:-14%; padding-left: 30%;">
+		<h3>Hei og Velkommen til Bobiltreff.no</h3>
+		<p>Hvordan bruke siden ? Trykk på din Region og alle treff som er registrert vil da
 		vises. Trykk deretter på det treff som dere ønsker å melde dere på og
-		fyll inn de opplysninger som det spørres etter.</div>
+		fyll inn de opplysninger som det spørres etter.</p></div>
 </body>
 </html>
 

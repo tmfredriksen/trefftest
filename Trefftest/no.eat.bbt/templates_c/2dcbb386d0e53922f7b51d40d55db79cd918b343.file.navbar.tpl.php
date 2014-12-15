@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.21-dev, created on 2014-12-14 10:46:43
+<?php /* Smarty version Smarty-3.1.21-dev, created on 2014-12-15 16:50:58
          compiled from "html\navbar.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:29632548c557b78e358-77413725%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '2dcbb386d0e53922f7b51d40d55db79cd918b343' => 
     array (
       0 => 'html\\navbar.tpl',
-      1 => 1418550293,
+      1 => 1418658654,
       2 => 'file',
     ),
   ),
@@ -39,31 +39,21 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 				<li><a href="index.php">Startside</a></li>
 				<li><a href="om.php">Om</a></li>
 				<li><a href="Login.php">Logg inn</a></li>
+				<li><a href="">Region Nord</a></li>
+				<li><a href="">Region Nordland</a></li>
+				<li><a href="">Region Midt</a></li>
+				<li><a href="">Region Vest</a></li>
+				<li><a href="">Region Sør</a></li>
+				<li><a href="">Region Øst</a></li>
 				<li class="dropdown"><a href="#" class="dropdown-toggle"
 					data-toggle="dropdown">Mer <b class="caret"></b></a>
 					<ul class="dropdown-menu">
-						<li><a href="">Region Nord</a></li>
-						<li><a href="">Region Nordland</a></li>
-						<li><a href="">Region Midt</a></li>
-						<li><a href="">Region Vest</a></li>
-						<li><a href="">Region Sør</a></li>
-						<li><a href="">Region Øst</a></li>
-
-
-						<li class="dropdown-header">Rediger konto</li>
-						<li><a href="edit.php">Kontoinnstillinger</a></li>
-						<li><a href="password_reset.php">Resett passord</a></li>
-
+						<li><a href="">Registrere nye treff</a></li>
+						<li class="dropdown-header">Brukere</li>
+						<li><a href="">Kontoinnstillinger</a></li>
+						<li><a href="register.php">Opprett Bruker</a></li>
 					</ul></li>
-				<li><div class="input-lg">
-						<form action="search.php" method="post">
-							<button type="submit" class="btn btn-primary btn-sm"
-								value="search">Registrere Nye Treff</button>
-					</div>
-					</form></li>
 			</ul>
-
-
 		</div>
 		<!--/.nav-collapse -->
 	</div>

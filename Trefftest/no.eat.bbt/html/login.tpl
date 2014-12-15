@@ -1,5 +1,6 @@
 {include file='html/header.tpl'}
 {include file='html/navbar.tpl'}
+<br />
 {if (isset($melding))}
 <h3>{$melding}</h3>
 {/if}
