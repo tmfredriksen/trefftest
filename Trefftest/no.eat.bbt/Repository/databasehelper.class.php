@@ -116,5 +116,24 @@ class databasehelper {
 		
 		$db->close();
 	}
+
+	public function opprettBruker($Navn, $Epost, $Telefon, $Passord, $Salt, $isAdmin) {
+		
+		$db = new mysqli ( $this->host, $this->username, $this->password, $this->dbname );
+		if ($db->connect_error) {
+			die ( 'Connect Error (' . $db->connect_errno . ') ' . $db->connect_error );
+		
+		}
+		
+		$brukjer = new Bruker($Navn, $Epost, $Telefon, $Passord, $Salt, $isAdmin);
+		
+		$stmt = $db->prepare("INSERT INTO Bruker (Navn, Epost, Telefon, Passord, Salt, isAdmin)
+		VALUES($Navn,$Epost,$Telefon,$Passord,$Salt,$isAdmin)");
+		$stmt->bind_param('i', $brukjer);
+		
+		$stmt->execute();
+		$db->close();
+		
+	}
 }
 ?>
