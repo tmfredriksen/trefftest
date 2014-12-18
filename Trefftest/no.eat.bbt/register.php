@@ -5,6 +5,8 @@ require_once ('libs/Smarty.class.php');
 include_once ('init.php');
 include_once ('Repository/databasehelper.class.php');
 include_once ('Repository/HashHelper.php');
+include_once ("navbar.php");
+
 
 $smarty = new Smarty ();
 
@@ -27,7 +29,7 @@ if(isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'])
 				$Sted = strip_tags($_POST["bruker_sted"]);
 				$isAdmin = 0;
 				$Salt = generateSalt();
-				$Passord = ($PassordGet . $Salt);
+				$Passord = ($Salt . $PassordGet);
 				$databasehelper = new databasehelper();			
 				$databasehelper->opprettBruker($Navn, $Epost, $Telefon, $Adresse, $Postnr, $Sted, $Passord, $Salt, $isAdmin);
 				$smarty->assign('melding', 'Bruker opprettet');

@@ -1,4 +1,4 @@
-{include file='html/header.tpl'} {include file='html/navbar.tpl'}
+{include file='html/header.tpl'}
 <html>
 <br /><br />
 <div class='container'>
@@ -36,7 +36,6 @@
 
 	<input class="btn btn-success" type="submit" name="btn_register" value="Opprett Bruker" />
 </form>
-
 </div>
 </div>
 </div>

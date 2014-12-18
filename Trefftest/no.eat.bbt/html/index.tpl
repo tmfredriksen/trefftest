@@ -15,7 +15,7 @@
 			</div>
 	
 	<br/>
-	<div style="margin-top:-2%; padding-left: 30%;">
+	<div style="margin-top:-14%; padding-left: 30%;">
 		<h3>Hei og Velkommen til Bobiltreff.no</h3>
 		<p>Hvordan bruke siden ? Trykk på din Region og alle treff som er registrert vil da
 		vises. Trykk deretter på det treff som dere ønsker å melde dere på og

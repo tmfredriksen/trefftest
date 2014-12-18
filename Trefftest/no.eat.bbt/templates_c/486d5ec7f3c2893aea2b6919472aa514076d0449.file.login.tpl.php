@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.21-dev, created on 2014-12-18 15:43:53
+<?php /* Smarty version Smarty-3.1.21-dev, created on 2014-12-18 19:10:53
          compiled from "html\login.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:1540954900ab327ebc1-29222365%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '486d5ec7f3c2893aea2b6919472aa514076d0449' => 
     array (
       0 => 'html\\login.tpl',
-      1 => 1418841265,
+      1 => 1418926218,
       2 => 'file',
     ),
   ),
@@ -24,8 +24,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_54900ab32f3ee7_78424264')) {function content_54900ab32f3ee7_78424264($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ('html/header.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
-
-<?php echo $_smarty_tpl->getSubTemplate ('html/navbar.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
 
 <br />
 <?php if ((isset($_smarty_tpl->tpl_vars['melding']->value))) {?>

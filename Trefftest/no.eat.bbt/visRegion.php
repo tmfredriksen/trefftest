@@ -1,5 +1,6 @@
 <?php
 include_once ('libs/Smarty.class.php');
+include_once ("navbar.php");
 
 $smarty = new Smarty();
 
