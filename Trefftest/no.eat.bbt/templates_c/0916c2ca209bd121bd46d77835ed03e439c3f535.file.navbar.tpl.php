@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.21-dev, created on 2014-12-18 19:51:47
+<?php /* Smarty version Smarty-3.1.21-dev, created on 2014-12-18 20:30:48
          compiled from "html\navbar.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:297225493088a270265-98757780%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '0916c2ca209bd121bd46d77835ed03e439c3f535' => 
     array (
       0 => 'html\\navbar.tpl',
-      1 => 1418928705,
+      1 => 1418930812,
       2 => 'file',
     ),
   ),
@@ -42,21 +42,18 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 		<div class="navbar-collapse collapse">
 			<ul class="nav navbar-nav">
 				<li><a href="index.php">Startside</a></li>
-				<li><a href="om.php">Om</a></li>
-				
-					<?php if ((isset($_SESSION['isAdmin']))) {?>
-					<?php if (($_SESSION['isAdmin'])) {?>
-						<li><a href="">Registrere nye treff</a></li>
-						<li><a href="admin.php">Treff til godkjenning</a></li>
-						<li><a href="">Kontoinnstillinger</a></li>
-						<li><a href="register.php">Opprett Bruker</a></li>
-						<?php }?>
-				<?php }?>
 
 				<?php if ((isset($_SESSION['loggedIn']))) {?>
 					<?php if (($_SESSION['loggedIn'])) {?>
-						<li><a href="logout.php">Logg ut</a></li>
+							<?php if (($_SESSION['isAdmin'])) {?>
+								<li><a href="admin.php">Treff til godkjenning</a></li>
+								<li><a href="">Kontoinnstillinger</a></li>
+								<li><a href="register.php">Opprett Bruker</a></li>
+						<?php } else { ?>
+							<li><a href="">Registrere nye treff</a></li>
+						<?php }?>
 					<?php }?>
+						<li><a href="logout.php">Logg ut</a></li>
 				<?php } else { ?>
 					<?php  $_smarty_tpl->tpl_vars['region'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['region']->_loop = false;
  $_smarty_tpl->tpl_vars['key'] = new Smarty_Variable;
@@ -64,7 +61,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 foreach ($_from as $_smarty_tpl->tpl_vars['region']->key => $_smarty_tpl->tpl_vars['region']->value) {
 $_smarty_tpl->tpl_vars['region']->_loop = true;
  $_smarty_tpl->tpl_vars['key']->value = $_smarty_tpl->tpl_vars['region']->key;
-?>				
+?>
 					<li><a href="visRegion.php?regionId=<?php echo $_smarty_tpl->tpl_vars['region']->value->getId();?>
 ">Region <?php echo $_smarty_tpl->tpl_vars['region']->value->getRegionnavn();?>
 </a></li>
