@@ -89,6 +89,8 @@
 </table>
 
 
-<a href="[lenke til påmelding]"><button class="btn btn-info">Til påmelding</button></a>
+
+
+<a href="paamelding.php?treffID={$treff->getId()}"><button class="btn btn-info">Til påmelding</button></a>
 
 {include file='html/footer.tpl'}

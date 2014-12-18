@@ -157,6 +157,25 @@ class databasehelper {
 	
 	}
 	
+	public function nyPaamelding($Medlemsnr, $Navn, $Epost, $Telefon, $Ledsager, $Hjemsted,
+			$Antpersoner, $Antdagerstrom, $TreffID) {
+	
+		$db = new mysqli ( $this->host, $this->username, $this->password, $this->dbname );
+		if ($db->connect_error) {
+			die ( 'Connect Error (' . $db->connect_errno . ') ' . $db->connect_error );
+	
+		}
+		
+		$stmt = $db->prepare("INSERT INTO Registrering (Medlemsnr, Navn, Epost, Telefon, Ledsager, Hjemsted, Antpersoner, Antdagerstrom, TreffID)
+		VALUES(?,?,?,?,?,?,?,?,?)");
+		$stmt->bind_param('ississiii', $Medlemsnr, $Navn, $Epost, $Telefon, $Ledsager, $Hjemsted, $Antpersoner,
+				$Antdagerstrom, $TreffID) ;
+	
+		$stmt->execute();
+		$db->close();
+	
+	}
+	
 	public function getRegioner() {
 		$db = new mysqli ( $this->host, $this->username, $this->password, $this->dbname );
 		if ($db->connect_error) {
