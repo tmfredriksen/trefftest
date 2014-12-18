@@ -2,6 +2,7 @@
 
 include_once ('../no.eat.bbt/Classes/Bruker.class.php');
 include_once ('../no.eat.bbt/Classes/Treff.class.php');
+include_once ('../no.eat.bbt/Classes/Region.class.php');
 include_once ('HashHelper.php');
 class databasehelper {
 	
@@ -133,6 +134,32 @@ class databasehelper {
 		$stmt->execute();
 		$db->close();
 		
+	}
+	
+	public function getRegioner() {
+		$db = new mysqli ( $this->host, $this->username, $this->password, $this->dbname );
+		if ($db->connect_error) {
+			die ( 'Connect Error (' . $db->connect_errno . ') ' . $db->connect_error );
+		
+		}
+		
+		$query = "SELECT * FROM Region";
+		
+		// Oppretter tomt array
+		$result = [];
+		
+		if ($stmt = $db->prepare($query)) {
+			$stmt->execute();
+			$stmt->bind_result($id, $Regionnavn);
+				
+			while ($stmt->fetch()) {
+				$region = new Region($id, $Regionnavn);
+				array_push($result, $region);
+			}
+				
+		}
+		
+		return $result;
 	}
 }
 ?>
