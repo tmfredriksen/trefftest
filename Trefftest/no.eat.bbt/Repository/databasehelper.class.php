@@ -148,8 +148,8 @@ class databasehelper {
 	
 		$stmt = $db->prepare("INSERT INTO Treff (Treffnavn, Startdato, Sluttdato, Sted, Koordinater, Plasser, Treffavgift,
 				Kontonr, Beskrivelse, Paameldingsfrist, Stromplasser, Strompris, isOk, RegionID, BrukerID)
-		VALUES('sssssiiissiiii', ?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
-		$stmt->bind_param($Treffnavn, $Startdato, $Sluttdato, $Sted, $Koordinater, $Plasser, $Treffavgift,
+		VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
+		$stmt->bind_param('sssssiiissiiiii', $Treffnavn, $Startdato, $Sluttdato, $Sted, $Koordinater, $Plasser, $Treffavgift,
 			$Kontonr, $Beskrivelse, $Paameldingsfrist, $Stromplasser, $Strompris, $isOk, $RegionID, $BrukerID) ;
 	
 		$stmt->execute();

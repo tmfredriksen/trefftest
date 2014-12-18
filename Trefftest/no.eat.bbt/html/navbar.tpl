@@ -24,7 +24,7 @@
 								<li><a href="">Rediger treff</a></li>
 								<li><a href="register.php">Opprett Bruker</a></li>
 						{else}
-							<li><a href="">Registrer Nyt</a></li>
+							<li><a href="opprettTreff.php">Opprett Treff</a></li>
 						{/if}
 					{/if}
 						<li><a href="logout.php">Logg ut</a></li>

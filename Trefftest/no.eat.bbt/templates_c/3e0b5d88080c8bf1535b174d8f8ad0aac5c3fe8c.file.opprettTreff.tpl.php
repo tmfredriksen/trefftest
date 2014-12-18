@@ -1,5 +1,28 @@
-{include file='html/header.tpl'}
-{include file='html/navbar.tpl'}
+<?php /* Smarty version Smarty-3.1.21-dev, created on 2014-12-18 21:01:46
+         compiled from "html\opprettTreff.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:2118654932f842c1067-31975790%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+$_valid = $_smarty_tpl->decodeProperties(array (
+  'file_dependency' => 
+  array (
+    '3e0b5d88080c8bf1535b174d8f8ad0aac5c3fe8c' => 
+    array (
+      0 => 'html\\opprettTreff.tpl',
+      1 => 1418932898,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '2118654932f842c1067-31975790',
+  'function' => 
+  array (
+  ),
+  'version' => 'Smarty-3.1.21-dev',
+  'unifunc' => 'content_54932f8431ec72_35992903',
+  'has_nocache_code' => false,
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_54932f8431ec72_35992903')) {function content_54932f8431ec72_35992903($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ('html/header.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
+
+<?php echo $_smarty_tpl->getSubTemplate ('html/navbar.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
+
 
 <br /><br />
 <div class='container'>
@@ -55,6 +78,8 @@
 
 
 
-{include file='html/footer.tpl'}
+<?php echo $_smarty_tpl->getSubTemplate ('html/footer.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
 
 
+
+<?php }} ?>

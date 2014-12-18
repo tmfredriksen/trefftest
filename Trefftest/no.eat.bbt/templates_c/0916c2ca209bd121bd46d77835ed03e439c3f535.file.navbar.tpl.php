@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.21-dev, created on 2014-12-18 20:30:48
+<?php /* Smarty version Smarty-3.1.21-dev, created on 2014-12-18 20:48:15
          compiled from "html\navbar.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:297225493088a270265-98757780%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '0916c2ca209bd121bd46d77835ed03e439c3f535' => 
     array (
       0 => 'html\\navbar.tpl',
-      1 => 1418930812,
+      1 => 1418932091,
       2 => 'file',
     ),
   ),
@@ -47,10 +47,10 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 					<?php if (($_SESSION['loggedIn'])) {?>
 							<?php if (($_SESSION['isAdmin'])) {?>
 								<li><a href="admin.php">Treff til godkjenning</a></li>
-								<li><a href="">Kontoinnstillinger</a></li>
+								<li><a href="">Rediger treff</a></li>
 								<li><a href="register.php">Opprett Bruker</a></li>
 						<?php } else { ?>
-							<li><a href="">Registrere nye treff</a></li>
+							<li><a href="opprettTreff.php">Opprett Treff</a></li>
 						<?php }?>
 					<?php }?>
 						<li><a href="logout.php">Logg ut</a></li>

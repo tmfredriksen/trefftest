@@ -26,8 +26,8 @@ if(isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'])
 					$Stromplasser = strip_tags($_POST["stromplasser"]);
 					$Strompris = strip_tags($_POST["strompris"]);
 					$isOk = 0;
-					$RegionID = 0; //getRegion
-					$BrukerID = 0; //getBruker
+					$RegionID = 1; //getRegion
+					$BrukerID = 5; //getBruker
 					
 					$databasehelper->opprettTreff($Treffnavn, $Startdato, $Sluttdato, $Sted, $Koordinater, $Plasser, $Treffavgift, $Kontonr, $Beskrivelse, $Paameldingsfrist, $Stromplasser, $Strompris, $isOk, $RegionID, $BrukerID);						
 					$smarty->assign('melding', 'Treff opprettet');
