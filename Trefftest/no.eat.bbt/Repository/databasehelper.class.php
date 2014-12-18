@@ -136,6 +136,27 @@ class databasehelper {
 		
 	}
 	
+	public function opprettTreff($Treffnavn, $Startdato, $Sluttdato, $Sted, $Koordinater, $Plasser, $Treffavgift,
+			$Kontonr, $Beskrivelse, $Paameldingsfrist, $Stromplasser, $Strompris, $isOk, $RegionID, $BrukerID) {
+	
+		$db = new mysqli ( $this->host, $this->username, $this->password, $this->dbname );
+		if ($db->connect_error) {
+			die ( 'Connect Error (' . $db->connect_errno . ') ' . $db->connect_error );
+	
+		}
+	
+	
+		$stmt = $db->prepare("INSERT INTO Treff (Treffnavn, Startdato, Sluttdato, Sted, Koordinater, Plasser, Treffavgift,
+				Kontonr, Beskrivelse, Paameldingsfrist, Stromplasser, Strompris)
+		VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
+		$stmt->bind_param($Treffnavn, $Startdato, $Sluttdato, $Sted, $Koordinater, $Plasser, $Treffavgift,
+			$Kontonr, $Beskrivelse, $Paameldingsfrist, $Stromplasser, $Strompris) ;
+	
+		$stmt->execute();
+		$db->close();
+	
+	}
+	
 	public function getRegioner() {
 		$db = new mysqli ( $this->host, $this->username, $this->password, $this->dbname );
 		if ($db->connect_error) {
