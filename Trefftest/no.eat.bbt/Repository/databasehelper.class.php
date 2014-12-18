@@ -161,5 +161,58 @@ class databasehelper {
 		
 		return $result;
 	}
+	
+	public function getTreffForRegion($id) {
+		$db = new mysqli ( $this->host, $this->username, $this->password, $this->dbname );
+		if ($db->connect_error) {
+			die ( 'Connect Error (' . $db->connect_errno . ') ' . $db->connect_error );
+		
+		}
+		
+		$stmt = $db->prepare ( "SELECT * FROM Treff WHERE RegionId = ?" );
+		$regionId = $db->real_escape_string ( $id ); // Vasker input
+		$stmt->bind_param ( 'i', $regionId );
+		// Oppretter tomt array
+		$result = [];
+
+		$stmt->execute();
+		$stmt->bind_result($id, $Treffnavn, $Startdato, $Sluttdato, $Sted, $Koordinater, $Plasser, $Treffavgift, $Kontonr, $Beskrivelse, $Paameldingsfrist, $Stromplasser, $Strompris, $isOk, $RegionID, $BrukerID);
+			
+		while ($stmt->fetch()) {
+			$treff = new Treff($Treffnavn, $Startdato, $Sluttdato, $Sted, $Koordinater, $Plasser, $Treffavgift, $Kontonr, $Beskrivelse, $Paameldingsfrist, $Stromplasser, $Strompris, $isOk, $RegionID, $BrukerID);
+			$treff->setId($id);
+			array_push($result, $treff);
+		}
+
+		
+		return $result;
+	}
+	
+	public function getRegion($id) {
+		$db = new mysqli ( $this->host, $this->username, $this->password, $this->dbname );
+		if ($db->connect_error) {
+			die ( 'Connect Error (' . $db->connect_errno . ') ' . $db->connect_error );
+		
+		}
+		
+		$stmt = $db->prepare ( "SELECT * FROM Region WHERE ID=?" );
+		$regionId = $db->real_escape_string ( $id ); // Vasker input
+		$stmt->bind_param ( 'i', $regionId );
+		
+		$stmt->bind_result($id, $regionNavn);
+		$stmt->execute ();
+		
+		// Hvis denne feiler finnes ikke treff-id'en i tabellen
+		if ($stmt->fetch ()) {
+				
+			$region = new Region($id, $regionNavn);
+				
+			return $region;
+				
+		} else {
+		
+			return null;
+		}
+	}
 }
 ?>

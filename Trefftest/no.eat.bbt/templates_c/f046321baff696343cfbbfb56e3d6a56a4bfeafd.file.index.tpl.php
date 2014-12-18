@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.21-dev, created on 2014-12-18 19:02:28
+<?php /* Smarty version Smarty-3.1.21-dev, created on 2014-12-18 19:26:44
          compiled from "html\index.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:953254930889eb8a38-63724849%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'f046321baff696343cfbbfb56e3d6a56a4bfeafd' => 
     array (
       0 => 'html\\index.tpl',
-      1 => 1418925740,
+      1 => 1418926529,
       2 => 'file',
     ),
   ),
@@ -37,7 +37,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 			</div>
 	
 	<br/>
-	<div style="margin-top:-2%; padding-left: 30%;">
+	<div style="margin-top:-14%; padding-left: 30%;">
 		<h3>Hei og Velkommen til Bobiltreff.no</h3>
 		<p>Hvordan bruke siden ? Trykk på din Region og alle treff som er registrert vil da
 		vises. Trykk deretter på det treff som dere ønsker å melde dere på og
