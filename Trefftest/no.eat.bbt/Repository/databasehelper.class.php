@@ -13,7 +13,7 @@ class databasehelper {
 	
 	function __construct() {
 		
-	}
+	} 
 	
 	public function getUser($epost) {
 	    
