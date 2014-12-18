@@ -23,17 +23,18 @@ class databasehelper {
 	
 		}
 
-		$stmt = $db->prepare ( "SELECT Navn, Telefon, Passord, Salt, isAdmin FROM Bruker WHERE Epost=?" );
+		$stmt = $db->prepare ( "SELECT ID, Navn, Telefon, Passord, Salt, isAdmin FROM Bruker WHERE Epost=?" );
 		$brukerid = $db->real_escape_string ( $epost ); // Vasker input
 		$stmt->bind_param ( 's', $brukerid );
 		
-		$stmt->bind_result ( $dbnavn, $dbtelefon, $dbpassord, $dbsalt, $dbadmin );
+		$stmt->bind_result ( $id, $dbnavn, $dbtelefon, $dbpassord, $dbsalt, $dbadmin );
 		$stmt->execute ();
 		
 		// Hvis denne feiler finnes ikke brukerid'en i tabellen
 		if ($stmt->fetch ()) {
 
 			$user = new Bruker ( $dbnavn, $brukerid, $dbtelefon, $dbpassord, $dbsalt, $dbadmin );
+			$user->setId($id);
 			return $user;
 			
 		} else {
