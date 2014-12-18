@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.21-dev, created on 2014-12-18 18:02:47
+<?php /* Smarty version Smarty-3.1.21-dev, created on 2014-12-18 19:34:54
          compiled from "html\visTreffAdmin.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:209565486f13ecc4034-48349684%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '36aebd39f9658f603740c594dca9fe69b1b4ce65' => 
     array (
       0 => 'html\\visTreffAdmin.tpl',
-      1 => 1418921807,
+      1 => 1418925970,
       2 => 'file',
     ),
   ),
@@ -24,8 +24,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_5486f13ed5c5d0_13461078')) {function content_5486f13ed5c5d0_13461078($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ('html/header.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
-
-<?php echo $_smarty_tpl->getSubTemplate ('html/navbar.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
 
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <br/><br/>
