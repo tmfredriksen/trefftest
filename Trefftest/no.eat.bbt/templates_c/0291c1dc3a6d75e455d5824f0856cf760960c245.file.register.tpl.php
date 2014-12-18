@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.21-dev, created on 2014-12-18 19:12:17
+<?php /* Smarty version Smarty-3.1.21-dev, created on 2014-12-18 20:05:11
          compiled from "html\register.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:1592054900aad6cb054-14388976%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '0291c1dc3a6d75e455d5824f0856cf760960c245' => 
     array (
       0 => 'html\\register.tpl',
-      1 => 1418926334,
+      1 => 1418929506,
       2 => 'file',
     ),
   ),
@@ -17,6 +17,10 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'version' => 'Smarty-3.1.21-dev',
   'unifunc' => 'content_54900aad709869_60993568',
+  'variables' => 
+  array (
+    'melding' => 0,
+  ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_54900aad709869_60993568')) {function content_54900aad709869_60993568($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ('html/header.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
@@ -51,13 +55,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 
 	<label for="user_password_repeat">Gjenta Passord</label><br>
 	<input id="user_password_repeat" type="password" name="user_password_repeat" required autocomplete="off" />  <br>      
-
-
-
-	<label></label><br>
-
+	<br />
 	<input class="btn btn-success" type="submit" name="btn_register" value="Opprett Bruker" />
 </form>
+<?php if ((isset($_smarty_tpl->tpl_vars['melding']->value))) {?>
+<h3><?php echo $_smarty_tpl->tpl_vars['melding']->value;?>
+</h3>
+<?php }?>
 </div>
 </div>
 </div>

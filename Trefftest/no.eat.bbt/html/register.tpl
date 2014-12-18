@@ -29,13 +29,12 @@
 
 	<label for="user_password_repeat">Gjenta Passord</label><br>
 	<input id="user_password_repeat" type="password" name="user_password_repeat" required autocomplete="off" />  <br>      
-
-
-
-	<label></label><br>
-
+	<br />
 	<input class="btn btn-success" type="submit" name="btn_register" value="Opprett Bruker" />
 </form>
+{if (isset($melding))}
+<h3>{$melding}</h3>
+{/if}
 </div>
 </div>
 </div>

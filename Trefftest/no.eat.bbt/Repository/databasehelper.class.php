@@ -128,7 +128,7 @@ class databasehelper {
 		
 		
 		$stmt = $db->prepare("INSERT INTO Bruker (Navn, Epost, Telefon, Adresse, Postnr, Sted, Passord, Salt, isAdmin)
-		VALUES(?,?,?,?,?,?)");
+		VALUES(?,?,?,?,?,?,?,?,?)");
 		$stmt->bind_param('ssisisssi', $Navn, $Epost, $Telefon, $Adresse, $Postnr, $Sted, $Passord, $Salt, $isAdmin);
 		
 		$stmt->execute();

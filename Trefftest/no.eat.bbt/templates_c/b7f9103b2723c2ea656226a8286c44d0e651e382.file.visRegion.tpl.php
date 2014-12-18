@@ -1,22 +1,20 @@
-<?php /* Smarty version Smarty-3.1.21-dev, created on 2014-12-18 19:40:28
+<?php /* Smarty version Smarty-3.1.21-dev, created on 2014-12-18 19:32:50
          compiled from "html\visRegion.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:213054931819327017-07946377%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:2302954931dd2170b54-37708570%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
-    'efca128d29e45b12068131a242d4aa99768dbc60' => 
+    'b7f9103b2723c2ea656226a8286c44d0e651e382' => 
     array (
       0 => 'html\\visRegion.tpl',
-      1 => 1418928020,
+      1 => 1418927421,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '213054931819327017-07946377',
+  'nocache_hash' => '2302954931dd2170b54-37708570',
   'function' => 
   array (
   ),
-  'version' => 'Smarty-3.1.21-dev',
-  'unifunc' => 'content_549318193907a6_57745244',
   'variables' => 
   array (
     'regionNavn' => 0,
@@ -24,8 +22,10 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'treff' => 0,
   ),
   'has_nocache_code' => false,
+  'version' => 'Smarty-3.1.21-dev',
+  'unifunc' => 'content_54931dd223fc08_03028388',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_549318193907a6_57745244')) {function content_549318193907a6_57745244($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ('html/header.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
+<?php if ($_valid && !is_callable('content_54931dd223fc08_03028388')) {function content_54931dd223fc08_03028388($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ('html/header.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
 
 
 <br/>
@@ -38,9 +38,8 @@ foreach ($_from as $_smarty_tpl->tpl_vars['treff']->key => $_smarty_tpl->tpl_var
 $_smarty_tpl->tpl_vars['treff']->_loop = true;
  $_smarty_tpl->tpl_vars['key']->value = $_smarty_tpl->tpl_vars['treff']->key;
 ?>
-	<li><a href="visTreff.php?treffId=<?php echo $_smarty_tpl->tpl_vars['treff']->value->getId();?>
-"><?php echo $_smarty_tpl->tpl_vars['treff']->value->getTreffnavn();?>
-</a></li>
+	<li><?php echo $_smarty_tpl->tpl_vars['treff']->value->getTreffnavn();?>
+</li>
 <?php } ?>
 <?php echo $_smarty_tpl->getSubTemplate ('html/footer.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
 <?php }} ?>
