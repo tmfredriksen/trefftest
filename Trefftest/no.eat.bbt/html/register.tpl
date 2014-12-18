@@ -7,7 +7,7 @@
 
 <form method="post" action="register.php" name="registerform">   
 	<label for="brukernavn">Navn</label> <br>
-	<input id="brukernavn" type="text" pattern="[a-zA-Z0-9]" name="brukernavn" required /><br>
+	<input id="brukernavn" type="text"  name="brukernavn" required /><br>
 
 	<label for="bruker_epost">Epost</label><br>
 	<input id="bruker_epost" type="email" name="bruker_epost" required /><br>
@@ -25,10 +25,10 @@
 	<input id="bruker_sted" type="text" name="bruker_sted" required /><br>
 	
 	<label for="user_password_new">Passord</label><br>
-	<input id="user_password_new" type="password" name="user_password_new" pattern="" required autocomplete="off" />  <br>
+	<input id="user_password_new" type="password" name="user_password_new" required autocomplete="off" />  <br>
 
 	<label for="user_password_repeat">Gjenta Passord</label><br>
-	<input id="user_password_repeat" type="password" name="user_password_repeat" pattern="" required autocomplete="off" />  <br>      
+	<input id="user_password_repeat" type="password" name="user_password_repeat" required autocomplete="off" />  <br>      
 
 
 

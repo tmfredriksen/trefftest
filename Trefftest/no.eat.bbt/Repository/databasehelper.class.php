@@ -117,7 +117,7 @@ class databasehelper {
 		$db->close();
 	}
 
-	public function opprettBruker($Navn, $Epost, $Telefon, $Passord, $Salt, $isAdmin) {
+	public function opprettBruker($Navn, $Epost, $Telefon, $Adresse, $Postnr, $Sted, $Passord, $Salt, $isAdmin) {
 		
 		$db = new mysqli ( $this->host, $this->username, $this->password, $this->dbname );
 		if ($db->connect_error) {
@@ -125,11 +125,10 @@ class databasehelper {
 		
 		}
 		
-		$brukjer = new Bruker($Navn, $Epost, $Telefon, $Passord, $Salt, $isAdmin);
 		
-		$stmt = $db->prepare("INSERT INTO Bruker (Navn, Epost, Telefon, Passord, Salt, isAdmin)
-		VALUES($Navn,$Epost,$Telefon,$Passord,$Salt,$isAdmin)");
-		$stmt->bind_param('i', $brukjer);
+		$stmt = $db->prepare("INSERT INTO Bruker (Navn, Epost, Telefon, Adresse, Postnr, Sted, Passord, Salt, isAdmin)
+		VALUES(?,?,?,?,?,?)");
+		$stmt->bind_param('ssisisssi', $Navn, $Epost, $Telefon, $Adresse, $Postnr, $Sted, $Passord, $Salt, $isAdmin);
 		
 		$stmt->execute();
 		$db->close();
