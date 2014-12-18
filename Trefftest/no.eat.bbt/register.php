@@ -28,8 +28,8 @@ if(isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'])
 				$Postnr = strip_tags($_POST["bruker_postnr"]);
 				$Sted = strip_tags($_POST["bruker_sted"]);
 				$isAdmin = 0;
-				$Salt = generateSalt();
-				$Passord = ($Salt . $PassordGet);
+				$Salt = generateSalt(); 
+				$Passord = checkHash($PassordGet, $Salt);
 				$databasehelper = new databasehelper();			
 				$databasehelper->opprettBruker($Navn, $Epost, $Telefon, $Adresse, $Postnr, $Sted, $Passord, $Salt, $isAdmin);
 				$smarty->assign('melding', 'Bruker opprettet');
