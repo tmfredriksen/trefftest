@@ -6,23 +6,23 @@
 <div class="text-center">
 
 <form method="post" action="register.php" name="registerform">   
-	<label for="user_name">Navn</label> <br>
-	<input id="user_name" type="text" pattern="[a-zA-Z0-9]" name="user_name" required /><br>
+	<label for="brukernavn">Navn</label> <br>
+	<input id="brukernavn" type="text" pattern="[a-zA-Z0-9]" name="brukernavn" required /><br>
 
-	<label for="user_email">Epost</label><br>
-	<input id="user_email" type="email" name="user_email" required /><br>
+	<label for="bruker_epost">Epost</label><br>
+	<input id="bruker_epost" type="email" name="bruker_epost" required /><br>
 	
-	<label for="user_tlf">Telefon</label><br>
-	<input id="user_tlf" type="tlf" name="user_tlf" required /><br>
+	<label for="bruker_tlf">Telefon</label><br>
+	<input id="bruker_tlf" type="number" name="bruker_tlf" required /><br>
 	
-	<label for="user_adress">Adresse</label><br>
-	<input id="user_adress" type="adress" name="user_adress" required /><br>
+	<label for="bruker_adresse">Adresse</label><br>
+	<input id="bruker_adresse" type="text" name="bruker_adresse" required /><br>
 	
-	<label for="user_postnr">Postnr</label><br>
-	<input id="user_postnr" type="postnr" name="user_postnr" required /><br>
+	<label for="bruker_postnr">Postnr</label><br>
+	<input id="bruker_postnr" type="number" name="bruker_postnr" required /><br>
 	
-	<label for="user_sted">Sted</label><br>
-	<input id="user_sted" type="sted" name="user_sted" required /><br>
+	<label for="bruker_sted">Sted</label><br>
+	<input id="bruker_sted" type="text" name="bruker_sted" required /><br>
 	
 	<label for="user_password_new">Passord</label><br>
 	<input id="user_password_new" type="password" name="user_password_new" pattern="" required autocomplete="off" />  <br>
@@ -34,7 +34,7 @@
 
 	<label></label><br>
 
-	<input type="submit" name="register" value="Opprett Bruker" />
+	<input class="btn btn-success" type="submit" name="btn_register" value="Opprett Bruker" />
 </form>
 
 </div>
