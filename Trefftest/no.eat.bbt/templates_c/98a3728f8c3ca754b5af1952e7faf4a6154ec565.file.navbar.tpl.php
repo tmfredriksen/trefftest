@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.21-dev, created on 2014-12-18 19:50:12
+<?php /* Smarty version Smarty-3.1.21-dev, created on 2014-12-18 21:05:45
          compiled from "html/navbar.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:9774782165490935df348e9-70236831%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '98a3728f8c3ca754b5af1952e7faf4a6154ec565' => 
     array (
       0 => 'html/navbar.tpl',
-      1 => 1418932163,
+      1 => 1418933130,
       2 => 'file',
     ),
   ),
@@ -50,7 +50,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 								<li><a href="">Rediger treff</a></li>
 								<li><a href="register.php">Opprett Bruker</a></li>
 						<?php } else { ?>
-							<li><a href="">Registrer Nyt</a></li>
+							<li><a href="opprettTreff.php">Opprett Treff</a></li>
 						<?php }?>
 					<?php }?>
 						<li><a href="logout.php">Logg ut</a></li>
