@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.21-dev, created on 2014-12-18 18:02:42
+<?php /* Smarty version Smarty-3.1.21-dev, created on 2014-12-18 20:32:07
          compiled from "html\admin.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:108435486f01b0ee4c1-01265450%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'bd614b56bc03b1e205149e4d187cca824d3a33c7' => 
     array (
       0 => 'html\\admin.tpl',
-      1 => 1418921802,
+      1 => 1418925804,
       2 => 'file',
     ),
   ),
@@ -25,8 +25,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_5486f01b177064_08100872')) {function content_5486f01b177064_08100872($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ('html/header.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
-
-<?php echo $_smarty_tpl->getSubTemplate ('html/navbar.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
 
 <br />
 <h1>Treff til godkjenning</h1>

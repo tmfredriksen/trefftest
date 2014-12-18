@@ -16,23 +16,20 @@
 		<div class="navbar-collapse collapse">
 			<ul class="nav navbar-nav">
 				<li><a href="index.php">Startside</a></li>
-				<li><a href="om.php">Om</a></li>
-				
-					{if (isset($smarty.session.isAdmin))}
-					{if ($smarty.session.isAdmin)}
-						<li><a href="">Registrere nye treff</a></li>
-						<li><a href="admin.php">Treff til godkjenning</a></li>
-						<li><a href="">Kontoinnstillinger</a></li>
-						<li><a href="register.php">Opprett Bruker</a></li>
-						{/if}
-				{/if}
 
 				{if (isset($smarty.session.loggedIn))}
 					{if ($smarty.session.loggedIn)}
-						<li><a href="logout.php">Logg ut</a></li>
+							{if ($smarty.session.isAdmin)}
+								<li><a href="admin.php">Treff til godkjenning</a></li>
+								<li><a href="">Rediger treff</a></li>
+								<li><a href="register.php">Opprett Bruker</a></li>
+						{else}
+							<li><a href="">Registrer Nyt</a></li>
+						{/if}
 					{/if}
+						<li><a href="logout.php">Logg ut</a></li>
 				{else}
-					{foreach key=key from=$regionListe item=region}				
+					{foreach key=key from=$regionListe item=region}
 					<li><a href="visRegion.php?regionId={$region->getId()}">Region {$region->getRegionnavn()}</a></li>
 					{/foreach}
 					<li><a href="Login.php">Logg inn</a></li>

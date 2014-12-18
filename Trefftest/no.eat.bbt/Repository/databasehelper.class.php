@@ -202,7 +202,7 @@ class databasehelper {
 		$stmt->bind_result($id, $regionNavn);
 		$stmt->execute ();
 		
-		// Hvis denne feiler finnes ikke treff-id'en i tabellen
+		// Hvis denne feiler finnes ikke region-id'en i tabellen
 		if ($stmt->fetch ()) {
 				
 			$region = new Region($id, $regionNavn);
