@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.21-dev, created on 2014-12-18 18:02:02
+<?php /* Smarty version Smarty-3.1.21-dev, created on 2014-12-18 19:02:28
          compiled from "html\navbar.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:297225493088a270265-98757780%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '0916c2ca209bd121bd46d77835ed03e439c3f535' => 
     array (
       0 => 'html\\navbar.tpl',
-      1 => 1418921806,
+      1 => 1418925685,
       2 => 'file',
     ),
   ),
@@ -15,9 +15,14 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
-  'has_nocache_code' => false,
   'version' => 'Smarty-3.1.21-dev',
   'unifunc' => 'content_5493088a27fc68_11026997',
+  'variables' => 
+  array (
+    'regionListe' => 0,
+    'region' => 0,
+  ),
+  'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_5493088a27fc68_11026997')) {function content_5493088a27fc68_11026997($_smarty_tpl) {?>
 <!-- Static navbar -->
@@ -38,13 +43,26 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 			<ul class="nav navbar-nav">
 				<li><a href="index.php">Startside</a></li>
 				<li><a href="om.php">Om</a></li>
-				<li><a href="Login.php">Logg inn</a></li>
-				<li><a href="nord.php">Region Nord</a></li>
-				<li><a href="nordland.php">Region Nordland</a></li>
-				<li><a href="midt.php">Region Midt</a></li>
-				<li><a href="vest.php">Region Vest</a></li>
-				<li><a href="soer.php">Region Sør</a></li>
-				<li><a href="oest.php">Region Øst</a></li>
+				<?php if ((isset($_SESSION['loggedIn']))) {?>
+					<?php if (($_SESSION['loggedIn'])) {?>
+						<li><a href="logout.php">Logg ut</a></li>
+					<?php }?>
+				<?php } else { ?>
+					<li><a href="Login.php">Logg inn</a></li>
+				<?php }?>
+				
+				<?php  $_smarty_tpl->tpl_vars['region'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['region']->_loop = false;
+ $_smarty_tpl->tpl_vars['key'] = new Smarty_Variable;
+ $_from = $_smarty_tpl->tpl_vars['regionListe']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['region']->key => $_smarty_tpl->tpl_vars['region']->value) {
+$_smarty_tpl->tpl_vars['region']->_loop = true;
+ $_smarty_tpl->tpl_vars['key']->value = $_smarty_tpl->tpl_vars['region']->key;
+?>				
+				<li><a href="visRegion.php?regionId=<?php echo $_smarty_tpl->tpl_vars['region']->value->getId();?>
+">Region <?php echo $_smarty_tpl->tpl_vars['region']->value->getRegionnavn();?>
+</a></li>
+				<?php } ?>
+
 				<li class="dropdown"><a href="#" class="dropdown-toggle"
 					data-toggle="dropdown">Mer <b class="caret"></b></a>
 					<ul class="dropdown-menu">

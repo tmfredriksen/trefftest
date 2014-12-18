@@ -6,6 +6,8 @@ include_once ('init.php');
 include_once ('Repository/databasehelper.class.php');
 include_once ('Repository/HashHelper.php');
 
+include_once ("navbar.php");
+
 $smarty = new Smarty;
 
 if(isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'])

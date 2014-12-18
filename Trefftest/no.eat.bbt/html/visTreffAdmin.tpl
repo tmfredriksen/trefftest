@@ -1,5 +1,4 @@
 {include file='html/header.tpl'}
-{include file='html/navbar.tpl'}
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <br/><br/>
 <table>

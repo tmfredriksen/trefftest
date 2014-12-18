@@ -17,14 +17,16 @@
 			<ul class="nav navbar-nav">
 				<li><a href="index.php">Startside</a></li>
 				<li><a href="om.php">Om</a></li>
-				<li><a href="Login.php">Logg inn</a></li>
+				{if (isset($smarty.session.loggedIn))}
+					{if ($smarty.session.loggedIn)}
+						<li><a href="logout.php">Logg ut</a></li>
+					{/if}
+				{else}
+					<li><a href="Login.php">Logg inn</a></li>
+				{/if}
+				
 				{foreach key=key from=$regionListe item=region}				
-				<li><a href="visRegion.php?regionId={$region->getId()}">Region Nord</a></li>
-				<li><a href="visRegion.php?regionId={$region->getId()}">Region Nordland</a></li>
-				<li><a href="visRegion.php?regionId={$region->getId()}">Region Midt</a></li>
-				<li><a href="visRegion.php?regionId={$region->getId()}">Region Vest</a></li>
-				<li><a href="visRegion.php?regionId={$region->getId()}">Region Sør</a></li>
-				<li><a href="visRegion.php?regionId={$region->getId()}">Region Øst</a></li>
+				<li><a href="visRegion.php?regionId={$region->getId()}">Region {$region->getRegionnavn()}</a></li>
 				{/foreach}
 
 				<li class="dropdown"><a href="#" class="dropdown-toggle"

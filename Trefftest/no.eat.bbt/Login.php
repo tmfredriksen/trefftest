@@ -6,6 +6,8 @@ include_once ('init.php');
 include_once ('Repository/databasehelper.class.php');
 include_once ('Repository/HashHelper.php');
 
+include_once ("navbar.php");
+
 // http://stackoverflow.com/questions/60174/how-can-i-prevent-sql-injection-in-php?rq=1
 
 $smarty = new Smarty ();
