@@ -18,12 +18,15 @@
 				<li><a href="index.php">Startside</a></li>
 				<li><a href="om.php">Om</a></li>
 				<li><a href="Login.php">Logg inn</a></li>
-				<li><a href="nord.php">Region Nord</a></li>
-				<li><a href="nordland.php">Region Nordland</a></li>
-				<li><a href="midt.php">Region Midt</a></li>
-				<li><a href="vest.php">Region Vest</a></li>
-				<li><a href="soer.php">Region Sør</a></li>
-				<li><a href="oest.php">Region Øst</a></li>
+				{foreach key=key from=$regionListe item=region}				
+				<li><a href="visRegion.php?regionId={$region->getId()}">Region Nord</a></li>
+				<li><a href="visRegion.php?regionId={$region->getId()}">Region Nordland</a></li>
+				<li><a href="visRegion.php?regionId={$region->getId()}">Region Midt</a></li>
+				<li><a href="visRegion.php?regionId={$region->getId()}">Region Vest</a></li>
+				<li><a href="visRegion.php?regionId={$region->getId()}">Region Sør</a></li>
+				<li><a href="visRegion.php?regionId={$region->getId()}">Region Øst</a></li>
+				{/foreach}
+
 				<li class="dropdown"><a href="#" class="dropdown-toggle"
 					data-toggle="dropdown">Mer <b class="caret"></b></a>
 					<ul class="dropdown-menu">
