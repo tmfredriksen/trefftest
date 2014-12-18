@@ -1,29 +1,29 @@
-<?php /* Smarty version Smarty-3.1.21-dev, created on 2014-12-18 19:34:54
-         compiled from "html\visTreffAdmin.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:209565486f13ecc4034-48349684%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /* Smarty version Smarty-3.1.21-dev, created on 2014-12-18 19:40:32
+         compiled from "html\visTreff.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:2285554931fa06e8d98-41593487%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
-    '36aebd39f9658f603740c594dca9fe69b1b4ce65' => 
+    '0221dc8831464cb3b40cb166a0864b2dde1d7cfd' => 
     array (
-      0 => 'html\\visTreffAdmin.tpl',
-      1 => 1418925970,
+      0 => 'html\\visTreff.tpl',
+      1 => 1418928014,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '209565486f13ecc4034-48349684',
+  'nocache_hash' => '2285554931fa06e8d98-41593487',
   'function' => 
   array (
   ),
-  'version' => 'Smarty-3.1.21-dev',
-  'unifunc' => 'content_5486f13ed5c5d0_13461078',
   'variables' => 
   array (
     'treff' => 0,
   ),
   'has_nocache_code' => false,
+  'version' => 'Smarty-3.1.21-dev',
+  'unifunc' => 'content_54931fa07eaad9_99221323',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5486f13ed5c5d0_13461078')) {function content_5486f13ed5c5d0_13461078($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ('html/header.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
+<?php if ($_valid && !is_callable('content_54931fa07eaad9_99221323')) {function content_54931fa07eaad9_99221323($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ('html/header.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
 
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <br/><br/>
@@ -127,8 +127,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 </table>
 
 
-<a href="admin.php?godkjennTreffId=<?php echo $_smarty_tpl->tpl_vars['treff']->value->getId();?>
-"><button class="btn btn-success">Godkjenn og publiser</button></a>
+<a href="[lenke til påmelding]"><button class="btn btn-info">Til påmelding</button></a>
 
 <?php echo $_smarty_tpl->getSubTemplate ('html/footer.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
 <?php }} ?>

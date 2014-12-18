@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.21-dev, created on 2014-12-18 19:28:17
+<?php /* Smarty version Smarty-3.1.21-dev, created on 2014-12-18 19:40:28
          compiled from "html\visRegion.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:213054931819327017-07946377%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'efca128d29e45b12068131a242d4aa99768dbc60' => 
     array (
       0 => 'html\\visRegion.tpl',
-      1 => 1418927183,
+      1 => 1418928020,
       2 => 'file',
     ),
   ),
@@ -38,8 +38,9 @@ foreach ($_from as $_smarty_tpl->tpl_vars['treff']->key => $_smarty_tpl->tpl_var
 $_smarty_tpl->tpl_vars['treff']->_loop = true;
  $_smarty_tpl->tpl_vars['key']->value = $_smarty_tpl->tpl_vars['treff']->key;
 ?>
-	<li><?php echo $_smarty_tpl->tpl_vars['treff']->value->getTreffnavn();?>
-</li>
+	<li><a href="visTreff.php?treffId=<?php echo $_smarty_tpl->tpl_vars['treff']->value->getId();?>
+"><?php echo $_smarty_tpl->tpl_vars['treff']->value->getTreffnavn();?>
+</a></li>
 <?php } ?>
 <?php echo $_smarty_tpl->getSubTemplate ('html/footer.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
 <?php }} ?>
