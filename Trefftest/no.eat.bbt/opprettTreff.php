@@ -1,5 +1,6 @@
 <?php
 include_once ('libs/Smarty.class.php');
+include_once ('Classes/Bruker.class.php');
 include_once ('init.php');
 include_once ('Repository/databasehelper.class.php');
 include_once ('Repository/HashHelper.php');
@@ -8,7 +9,11 @@ $smarty = new Smarty;
 
 if(isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'])
 {	
-				$databasehelper = new databasehelper();			
+				$databasehelper = new databasehelper();
+				$regioner = $databasehelper->getRegioner();
+				
+				$smarty->assign("regionListe", $regioner);
+				
 				$smarty->display('html/opprettTreff.tpl');
 				
 				if (isset ( $_POST ['btn_opprettTreff'] ))
@@ -26,16 +31,16 @@ if(isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'])
 					$Stromplasser = strip_tags($_POST["stromplasser"]);
 					$Strompris = strip_tags($_POST["strompris"]);
 					$isOk = 0;
-					$RegionID = 1; //getRegion
-					$BrukerID = 5; //getBruker
+					$RegionID = strip_tags($_POST["region_id"]);
+					$BrukerID = $_SESSION['user']->getId();
 					
 					$databasehelper->opprettTreff($Treffnavn, $Startdato, $Sluttdato, $Sted, $Koordinater, $Plasser, $Treffavgift, $Kontonr, $Beskrivelse, $Paameldingsfrist, $Stromplasser, $Strompris, $isOk, $RegionID, $BrukerID);						
 					$smarty->assign('melding', 'Treff opprettet');
 				}
 				
 }
-		else {
-			header("location: index.php");
+else {
+	header("location: index.php");
 		
 	
 }

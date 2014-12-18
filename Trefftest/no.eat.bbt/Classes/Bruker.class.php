@@ -1,5 +1,6 @@
 <?php
 class Bruker {
+	private $Id;
 	private $Navn;
 	private $Epost;
 	private $Passord;
@@ -21,6 +22,12 @@ class Bruker {
 	}
 	public function setNavn($Navn) {
 		$this->Navn = $Navn;
+	}
+	public function getId() {
+		return $this->Id;
+	}
+	public function setId($Id) {
+		$this->Id = $Id;
 	}
 	public function getEpost() {
 		return $this->Epost;

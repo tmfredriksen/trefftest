@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.21-dev, created on 2014-12-18 21:01:46
+<?php /* Smarty version Smarty-3.1.21-dev, created on 2014-12-18 21:59:33
          compiled from "html\opprettTreff.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:2118654932f842c1067-31975790%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '3e0b5d88080c8bf1535b174d8f8ad0aac5c3fe8c' => 
     array (
       0 => 'html\\opprettTreff.tpl',
-      1 => 1418932898,
+      1 => 1418936371,
       2 => 'file',
     ),
   ),
@@ -17,6 +17,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'version' => 'Smarty-3.1.21-dev',
   'unifunc' => 'content_54932f8431ec72_35992903',
+  'variables' => 
+  array (
+    'regionListe' => 0,
+    'region' => 0,
+  ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_54932f8431ec72_35992903')) {function content_54932f8431ec72_35992903($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ('html/header.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
@@ -34,17 +39,34 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 	<label for="treffnavn">Treffnavn</label> <br>
 	<input id="treffnavn" type="text"  name="treffnavn" required /><br>
 
-	<label for="startdato">Startdato</label><br>
+	<label for="startdato">Startdato(yyyymmdd)</label><br>
 	<input id="startdato" type="date" name="startdato" required /><br>
 	
-	<label for="sluttdato">Sluttdato</label><br>
+	<label for="sluttdato">Sluttdato(yyyymmdd)</label><br>
 	<input id="sluttdato" type="date" name="sluttdato" required /><br>
 
 	<label for="sted">Sted</label><br>
 	<input id="sted" type="text" name="sted" required /><br>
 	
+	<label for="regionId">Region</label><br>
+	<select name="region_id" required>
+    	<option value='' selected>-- Velg region --</option>
+    	<?php  $_smarty_tpl->tpl_vars['region'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['region']->_loop = false;
+ $_smarty_tpl->tpl_vars['key'] = new Smarty_Variable;
+ $_from = $_smarty_tpl->tpl_vars['regionListe']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['region']->key => $_smarty_tpl->tpl_vars['region']->value) {
+$_smarty_tpl->tpl_vars['region']->_loop = true;
+ $_smarty_tpl->tpl_vars['key']->value = $_smarty_tpl->tpl_vars['region']->key;
+?>
+    		<option value='<?php echo $_smarty_tpl->tpl_vars['region']->value->getId();?>
+'>Region <?php echo $_smarty_tpl->tpl_vars['region']->value->getRegionnavn();?>
+</option>
+		<?php } ?>
+	</select>
+	<label></label><br>
+	
 	<label for="koordinater">Koordinater</label><br>
-	<input id="koordinater" type="text" name="koordinater" required /><br>
+	<input id="koordinater" type="text" name="koordinater" /><br>
 	
 	<label for="plasser">Plasser</label><br>
 	<input id="plasser" type="number" name="plasser" required /><br>
@@ -58,13 +80,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 	<label for="beskrivelse">Beskrivelse</label><br>
 	<input id="beskrivelse" type="text" name="beskrivelse" />  <br>
 	
-	<label for="paameldingsfrist">Paameldingsfrist</label><br>
+	<label for="paameldingsfrist">Påmeldingsfrist(yyyymmdd)</label><br>
 	<input id="paameldingsfrist" type="date" name="paameldingsfrist" required /><br>
 	
-	<label for="stromplasser">Stromplasser</label><br>
+	<label for="stromplasser">Strømplasser</label><br>
 	<input id="stromplasser" type="text" name="stromplasser" />  <br>
 	
-	<label for="strompris">"Strompris"</label><br>
+	<label for="strompris">"Strømpris"</label><br>
 	<input id="strompris" type="number" name="strompris" />  <br>
 
 

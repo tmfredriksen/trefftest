@@ -20,8 +20,17 @@
 	<label for="sted">Sted</label><br>
 	<input id="sted" type="text" name="sted" required /><br>
 	
+	<label for="regionId">Region</label><br>
+	<select name="region_id" required>
+    	<option value='' selected>-- Velg region --</option>
+    	{foreach key=key from=$regionListe item=region}
+    		<option value='{$region->getId()}'>Region {$region->getRegionnavn()}</option>
+		{/foreach}
+	</select>
+	<label></label><br>
+	
 	<label for="koordinater">Koordinater</label><br>
-	<input id="koordinater" type="text" name="koordinater" required /><br>
+	<input id="koordinater" type="text" name="koordinater" /><br>
 	
 	<label for="plasser">Plasser</label><br>
 	<input id="plasser" type="number" name="plasser" required /><br>
