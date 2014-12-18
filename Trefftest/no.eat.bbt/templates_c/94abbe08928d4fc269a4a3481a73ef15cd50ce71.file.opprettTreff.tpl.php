@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.21-dev, created on 2014-12-18 19:26:16
+<?php /* Smarty version Smarty-3.1.21-dev, created on 2014-12-18 20:20:20
          compiled from "html/opprettTreff.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:937781789549329fa79fb21-27447836%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '94abbe08928d4fc269a4a3481a73ef15cd50ce71' => 
     array (
       0 => 'html/opprettTreff.tpl',
-      1 => 1418930768,
+      1 => 1418933989,
       2 => 'file',
     ),
   ),
@@ -34,10 +34,10 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 	<label for="treffnavn">Treffnavn</label> <br>
 	<input id="treffnavn" type="text"  name="treffnavn" required /><br>
 
-	<label for="startdato">Startdato</label><br>
+	<label for="startdato">Startdato(yyyymmdd)</label><br>
 	<input id="startdato" type="date" name="startdato" required /><br>
 	
-	<label for="sluttdato">Sluttdato</label><br>
+	<label for="sluttdato">Sluttdato(yyyymmdd)</label><br>
 	<input id="sluttdato" type="date" name="sluttdato" required /><br>
 
 	<label for="sted">Sted</label><br>
@@ -58,13 +58,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 	<label for="beskrivelse">Beskrivelse</label><br>
 	<input id="beskrivelse" type="text" name="beskrivelse" />  <br>
 	
-	<label for="paameldingsfrist">Paameldingsfrist</label><br>
-	<input id="paameldingsfrist" type="text" name="paameldingsfrist" required /><br>
+	<label for="paameldingsfrist">Påmeldingsfrist(yyyymmdd)</label><br>
+	<input id="paameldingsfrist" type="date" name="paameldingsfrist" required /><br>
 	
-	<label for="stromplasser">Stromplasser</label><br>
+	<label for="stromplasser">Strømplasser</label><br>
 	<input id="stromplasser" type="text" name="stromplasser" />  <br>
 	
-	<label for="strompris">"Strompris"</label><br>
+	<label for="strompris">"Strømpris"</label><br>
 	<input id="strompris" type="number" name="strompris" />  <br>
 
 

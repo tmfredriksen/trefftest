@@ -23,6 +23,9 @@
 								<li><a href="admin.php">Treff til godkjenning</a></li>
 								<li><a href="">Rediger treff</a></li>
 								<li><a href="register.php">Opprett Bruker</a></li>
+								<li><a href="opprettTreff.php">Opprett Treff</a></li>
+								
+								
 						{else}
 							<li><a href="opprettTreff.php">Opprett Treff</a></li>
 						{/if}

@@ -11,10 +11,10 @@
 	<label for="treffnavn">Treffnavn</label> <br>
 	<input id="treffnavn" type="text"  name="treffnavn" required /><br>
 
-	<label for="startdato">Startdato</label><br>
+	<label for="startdato">Startdato(yyyymmdd)</label><br>
 	<input id="startdato" type="date" name="startdato" required /><br>
 	
-	<label for="sluttdato">Sluttdato</label><br>
+	<label for="sluttdato">Sluttdato(yyyymmdd)</label><br>
 	<input id="sluttdato" type="date" name="sluttdato" required /><br>
 
 	<label for="sted">Sted</label><br>
@@ -35,13 +35,13 @@
 	<label for="beskrivelse">Beskrivelse</label><br>
 	<input id="beskrivelse" type="text" name="beskrivelse" />  <br>
 	
-	<label for="paameldingsfrist">Paameldingsfrist</label><br>
+	<label for="paameldingsfrist">Påmeldingsfrist(yyyymmdd)</label><br>
 	<input id="paameldingsfrist" type="date" name="paameldingsfrist" required /><br>
 	
-	<label for="stromplasser">Stromplasser</label><br>
+	<label for="stromplasser">Strømplasser</label><br>
 	<input id="stromplasser" type="text" name="stromplasser" />  <br>
 	
-	<label for="strompris">"Strompris"</label><br>
+	<label for="strompris">"Strømpris"</label><br>
 	<input id="strompris" type="number" name="strompris" />  <br>
 
 
