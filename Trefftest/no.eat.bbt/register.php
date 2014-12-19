@@ -28,14 +28,15 @@ if (isset ( $_SESSION ['loggedIn'] ) && $_SESSION ['loggedIn']) {
 				$Salt = generateSalt ();
 				$Passord = checkHash ( $PassordGet, $Salt );
 				$databasehelper = new databasehelper ();
-				// $databasehelper->opprettBruker($Navn, $Epost, $Telefon, $Adresse, $Postnr, $Sted, $Passord, $Salt, $isAdmin);
+				$databasehelper->opprettBruker($Navn, $Epost, $Telefon, $Adresse, $Postnr, $Sted, $Passord, $Salt, $isAdmin);
 				
 				$subject = 'Konto for bobiltreff.no';
-				$message = 'Her har du din konto for å registrere treff
-						    Bruker: ' . $Epost . ' \n Passord: ' . $PassordGet;
-				mail_utf8($Epost, "Stein", "stein.gamst@gmail.com", $subject, $message);
-				//mail ( $Epost, $subject, $message, implode ( "\r\n", $headers ) );
+				$message = 'Her har du din konto for å registrere treff.
+						    Bruker: ' . $Epost . " \r\n " . 'Passord: ' . $PassordGet;
+				$sendepost = mail_utf8($Epost, "Stein Cato Gamst", "stein.gamst@gmail.com", $subject, $message);
 				$smarty->assign ( 'melding', 'Bruker opprettet' );
+				echo "<script type='text/javascript'>alert('Bruker opprettet! $sendepost ')</script>";
+				
 			}
 		} else {
 			$smarty->assign ( 'melding', 'Du må være admin' );

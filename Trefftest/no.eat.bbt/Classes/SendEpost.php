@@ -1,6 +1,7 @@
 <?php
 require ("class.phpmailer.php");
 require ("class.smtp.php");
+
 function mail_utf8($to, $from_user, $from_email, $subject, $message) {
 	$mail = new PHPMailer ();
 	
@@ -13,15 +14,15 @@ function mail_utf8($to, $from_user, $from_email, $subject, $message) {
 	$mail->IsHTML ( true );
 	$mail->Username = "skreddernes10@gmail.com";
 	$mail->Password = "mufhennmlmxptvup";
-	$mail->SetFrom ( "example@gmail.com" );
-	$mail->Subject = "Test";
-	$mail->Body = "hello";
-	$mail->AddAddress ( "eivind.skreddernes@gmail.com" );
+	$mail->SetFrom ( $from_email, $from_user );
+	$mail->Subject = $subject;
+	$mail->Body = $message;
+	$mail->AddAddress ($to);
 	
 	if (! $mail->Send ()) {
-		echo "Mailer Error: " . $mail->ErrorInfo;
+		return "Mailer Error: " . $mail->ErrorInfo;
 	} else {
-		echo "Message has been sent";
+		return "Epost er sendt ut til " . $to;
 	}
 }
 ?>
