@@ -57,8 +57,8 @@
 	<label></label><br>
 	<!-- Script for å generere nye aktivitetsfelt (WIP)
 	<p> 
-  <input type="button" value="Add Passenger" onClick="addRow('dataTable')" /> 
-  <input type="button" value="Remove Passenger" onClick="deleteRow('dataTable')" /> 
+  <input type="button" value="Legg til aktivitet" onClick="addRow('dataTable')" /> 
+  <input type="button" value="Fjern denne aktiviteten" onClick="deleteRow('dataTable')" /> 
   <p>(All acions apply only to entries with check marked check boxes only.)</p>
 </p>
 				
