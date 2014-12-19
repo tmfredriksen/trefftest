@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.21-dev, created on 2014-12-18 19:10:53
+<?php /* Smarty version Smarty-3.1.21-dev, created on 2014-12-18 22:38:03
          compiled from "html\navbar.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:2819754900a972ab432-85659953%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '2dcbb386d0e53922f7b51d40d55db79cd918b343' => 
     array (
       0 => 'html\\navbar.tpl',
-      1 => 1418926218,
+      1 => 1418938381,
       2 => 'file',
     ),
   ),
@@ -42,36 +42,35 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 		<div class="navbar-collapse collapse">
 			<ul class="nav navbar-nav">
 				<li><a href="index.php">Startside</a></li>
-				<li><a href="om.php">Om</a></li>
+
 				<?php if ((isset($_SESSION['loggedIn']))) {?>
 					<?php if (($_SESSION['loggedIn'])) {?>
-						<li><a href="logout.php">Logg ut</a></li>
+							<?php if (($_SESSION['isAdmin'])) {?>
+								<li><a href="admin.php">Treff til godkjenning</a></li>
+								<li><a href="">Rediger treff</a></li>
+								<li><a href="register.php">Opprett Bruker</a></li>
+								<li><a href="opprettTreff.php">Opprett Treff</a></li>
+								
+								
+						<?php } else { ?>
+							<li><a href="opprettTreff.php">Opprett Treff</a></li>
+						<?php }?>
 					<?php }?>
+						<li><a href="logout.php">Logg ut</a></li>
 				<?php } else { ?>
-					<li><a href="Login.php">Logg inn</a></li>
-				<?php }?>
-				
-				<?php  $_smarty_tpl->tpl_vars['region'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['region']->_loop = false;
+					<?php  $_smarty_tpl->tpl_vars['region'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['region']->_loop = false;
  $_smarty_tpl->tpl_vars['key'] = new Smarty_Variable;
  $_from = $_smarty_tpl->tpl_vars['regionListe']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
 foreach ($_from as $_smarty_tpl->tpl_vars['region']->key => $_smarty_tpl->tpl_vars['region']->value) {
 $_smarty_tpl->tpl_vars['region']->_loop = true;
  $_smarty_tpl->tpl_vars['key']->value = $_smarty_tpl->tpl_vars['region']->key;
-?>				
-				<li><a href="visRegion.php?regionId=<?php echo $_smarty_tpl->tpl_vars['region']->value->getId();?>
+?>
+					<li><a href="visRegion.php?regionId=<?php echo $_smarty_tpl->tpl_vars['region']->value->getId();?>
 ">Region <?php echo $_smarty_tpl->tpl_vars['region']->value->getRegionnavn();?>
 </a></li>
-				<?php } ?>
-
-				<li class="dropdown"><a href="#" class="dropdown-toggle"
-					data-toggle="dropdown">Mer <b class="caret"></b></a>
-					<ul class="dropdown-menu">
-						<li><a href="">Registrere nye treff</a></li>
-						<li><a href="admin.php">Treff til godkjenning</a></li>
-						<li class="dropdown-header">Brukere</li>
-						<li><a href="">Kontoinnstillinger</a></li>
-						<li><a href="register.php">Opprett Bruker</a></li>
-					</ul></li>
+					<?php } ?>
+					<li><a href="Login.php">Logg inn</a></li>
+				<?php }?>
 			</ul>
 		</div>
 		<!--/.nav-collapse -->
