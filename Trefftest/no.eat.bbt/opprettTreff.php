@@ -16,6 +16,24 @@ if(isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'])
 				
 				$smarty->display('html/opprettTreff.tpl');
 				
+				// Genialt eksempel:
+				// http://techstream.org/Web-Development/PHP/Dynamic-Form-Processing-with-PHP
+				/*	$chkbox = $_POST['chk'];                              // array
+					$bus = $_POST['bus'];
+					$day = $_POST['day'];
+					$month = $_POST['month'];
+					$mob = $_POST['mob'];
+					$type = $_POST['type'];
+					$from = $_POST['from'];
+					$to=$_POST['to'];
+					$root=$_POST['root'];
+					$BX_NAME=$_POST['BX_NAME'];        // array
+					$BX_age=$_POST['BX_age'];	   // array		
+					$BX_gender=$_POST['BX_gender'];    // array
+					$BX_birth=$_POST['BX_birth'];	   // array
+}				
+				 */
+				
 				if (isset ( $_POST ['btn_opprettTreff'] ))
 				{	
 					$Treffnavn = strip_tags($_POST["treffnavn"]);
