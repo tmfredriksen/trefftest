@@ -1,11 +1,8 @@
-{include file='html/header.tpl'}
+﻿{include file='html/header.tpl'}
 
 <br/>
-<h2 >Treff for region {$regionNavn}:</h2>
+<h2>Registrerte treff i Region {$regionNavn}</h2>
 {foreach key=key from=$treffListe item=treff}
-
-<li><a href="visTreff.php?treffId={$treff->getId()}">{$treff->getTreffnavn()}</a></li>
-      
-	
+	{$treff->toRegionString()}
 {/foreach}
 {include file='html/footer.tpl'}

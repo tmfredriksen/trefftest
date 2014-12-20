@@ -140,5 +140,14 @@ class Treff {
 		. $this->Paameldingsfrist . " | Antall strømplasser: " . $this->Stromplasser
 		. " | Pris per døgn: " . $this->Strompris;
 	}
+	
+	// Bruk i regionvisning
+	public function toRegionString() {
+		return "<h2>" . $this->Treffnavn . ", " . $this->Sted . "</h2>"
+		. "<p>" . $this->Startdato . " - " . $this->Sluttdato . "<br/>" 
+		. "Treffavgift kr" . $this->Treffavgift . " pr person<br/>" 
+		. "Påmeldingsfrist: " . $this->Paameldingsfrist . "<br/><a href='visTreff.php?treffId=" 
+		. $this->Id . "'>Trykk for mer info og påmelding</a></p>";
+	}
 }
 ?>

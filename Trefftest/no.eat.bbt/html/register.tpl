@@ -1,4 +1,4 @@
-{include file='html/header.tpl'}
+﻿{include file='html/header.tpl'}
 <html>
 <script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
 <script type="text/javascript">

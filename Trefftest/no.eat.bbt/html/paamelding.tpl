@@ -1,4 +1,4 @@
-{include file='html/header.tpl'}
+﻿{include file='html/header.tpl'}
 {include file='html/navbar.tpl'}
 
 <br /><br />

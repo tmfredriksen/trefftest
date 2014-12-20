@@ -1,4 +1,4 @@
-{include file='html/header.tpl'}
+﻿{include file='html/header.tpl'}
 <br /><br />
 {if (isset($melding))}
 <h3>{$melding}</h3>

@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.21-dev, created on 2014-12-20 17:39:50
+<?php /* Smarty version Smarty-3.1.21-dev, created on 2014-12-20 17:56:16
          compiled from "html\opprettTreff.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:2118654932f842c1067-31975790%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '3e0b5d88080c8bf1535b174d8f8ad0aac5c3fe8c' => 
     array (
       0 => 'html\\opprettTreff.tpl',
-      1 => 1419093585,
+      1 => 1419093828,
       2 => 'file',
     ),
   ),
@@ -66,35 +66,34 @@ $_smarty_tpl->tpl_vars['region']->_loop = true;
 	<label></label><br>
 	
 	<label for="koordinater">Koordinater</label><br>
-	<input id="koordinater" type="text" name="koordinater" /><br>
+	<input id="koordinater" type="text" name="koordinater" /><br/>
 	
 	<label for="plasser">Plasser</label><br>
-	<input id="plasser" type="number" name="plasser" required /><br>
+	<input id="plasser" type="number" name="plasser" required /><br/>
 	
 	<label for="treffavgift">Treffavgift</label><br>
-	<input id="treffavgift" type="number" name="treffavgift" />  <br>
+	<input id="treffavgift" type="number" name="treffavgift" /><br/>
 	
 	<label for="kontonr">Kontonr</label><br>
 	<input id="kontonr" type="number" name="kontonr" required /><br>
 	
 	<label for="beskrivelse">Beskrivelse</label><br>
-	<input id="beskrivelse" type="text" name="beskrivelse" />  <br>
+	<input id="beskrivelse" type="text" name="beskrivelse" /><br/>
 	
 	<label for="paameldingsfrist">P√•meldingsfrist(yyyymmdd)</label><br>
 	<input id="paameldingsfrist" type="date" name="paameldingsfrist" required /><br>
 	
 	<label for="stromplasser">Str√∏mplasser</label><br>
-	<input id="stromplasser" type="text" name="stromplasser" />  <br>
+	<input id="stromplasser" type="text" name="stromplasser" /><br/>
 	
 	<label for="strompris">"Str√∏mpris"</label><br>
-	<input id="strompris" type="number" name="strompris" />  <br>
+	<input id="strompris" type="number" name="strompris" /><br/>
 
 
 	<label></label><br>
-	<!-- Script for Â generere nye aktivitetsfelt (WIP)-->
+	<!-- Script for Â generere nye aktivitetsfelt (innmari bra)-->
 	<p> 
   		<input type="button" value="Legg til aktivitet" onClick="addRow()" />
-
 	</p>
 
 <div id="aktiviteter"></div>
@@ -102,6 +101,9 @@ $_smarty_tpl->tpl_vars['region']->_loop = true;
 <!-- dÊsken kor rÂtt-->
 <?php echo '<script'; ?>
  src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js">
+// Kode fra http://www.infotuts.com/dynamically-add-input-fields-to-form-jquery/,
+// http://blog.calendarscripts.info/dynamically-adding-input-form-fields-with-jquery/ og
+// http://techstream.org/Web-Development/PHP/Dynamic-Form-Processing-with-PHP
 // Bruker Google sin jQuery
 <?php echo '</script'; ?>
 >
@@ -111,10 +113,10 @@ $_smarty_tpl->tpl_vars['region']->_loop = true;
 
 var rowNum = 0;
 rowNum++;
-
+// Fikser css senere...
 function addRow() {
 	var row = '<p id="rowNum' + rowNum + '"><label>Navn p&aring; aktivitet</label><input type="text" name="BX_NAME[]"><label>Beskrivelse</label>'
-	+ '<input type="text" class="small"  name="BX_desc[]"><label>Pris</label><input type="number" class="small" name="BX_price[]">'
+	+ '<input type="text" class="small" name="BX_desc[]"><label>Pris</label><input type="number" class="small" name="BX_price[]">'
 	+ '<input class="btn btn-danger" type="button" value="Fjern denne aktiviteten" onClick="deleteRow(' + rowNum + ');"/></p>';
 	$('#aktiviteter').append(row);
 	
@@ -126,13 +128,11 @@ function deleteRow(rowId) {
 <?php echo '</script'; ?>
 >
 
-	<input class="btn btn-success" type="submit" name="btn_opprettTreff" value="Opprett treff" />
+<input class="btn btn-success" type="submit" name="btn_opprettTreff" value="Opprett treff" />
 </form>
 </div>
 </div>
 </div>
-
-
 
 <?php echo $_smarty_tpl->getSubTemplate ('html/footer.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
 
