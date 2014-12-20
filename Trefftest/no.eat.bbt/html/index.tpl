@@ -22,14 +22,15 @@
 			{else}
 				<!-- Logget inn som treffansvarlig -->
 				<p>Du er logget inn som treffansvarlig. Trykk på Opprett Treff for å opprette
-				et nytt treff. Er det spørsmål eller problemer, kontakter du: stein.gamst@gmail.com</p>
+				et nytt treff.<br/>Er det spørsmål eller problemer, kontakter du <a href="mailto:stein.gamst@gmail.com">stein.gamst@gmail.com</a></p>
 			{/if}
 		{/if}
 	{else}
 		<!-- Vanlig bruker -->
-		<p>Hvordan bruke siden ? Trykk på din Region og alle treff som er registrert vil da
-		vises. Trykk deretter på det treff som dere ønsker å melde dere på og
-		fyll inn de opplysninger som det spørres etter.</p>
+		<h3>Hvordan bruke siden?</h3>
+		<p>Trykk på din Region og alle treff som er registrert vil da vises.
+		<br/>Trykk deretter på det treff som dere ønsker å melde dere på og
+		<br/>fyll inn de opplysninger som det spørres etter.</p>
 
 	{/if}
 </div>

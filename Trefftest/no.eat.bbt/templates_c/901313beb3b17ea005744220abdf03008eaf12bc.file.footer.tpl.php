@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.21-dev, created on 2014-12-18 18:02:02
+<?php /* Smarty version Smarty-3.1.21-dev, created on 2014-12-20 16:45:47
          compiled from "html\footer.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:132655486f01b25d828-25606774%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '901313beb3b17ea005744220abdf03008eaf12bc' => 
     array (
       0 => 'html\\footer.tpl',
-      1 => 1418921808,
+      1 => 1419090076,
       2 => 'file',
     ),
   ),
@@ -23,10 +23,10 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     ================================================== -->
 	<!-- Placed at the end of the document so the pages load faster -->
 	<?php echo '<script'; ?>
- src="js/jquery-1.11.1.min.js"><?php echo '</script'; ?>
+ src="../js/jquery-1.11.1.min.js"><?php echo '</script'; ?>
 >
 	<?php echo '<script'; ?>
- src="js/bootstrap.min.js"><?php echo '</script'; ?>
+ src="../js/bootstrap.min.js"><?php echo '</script'; ?>
 >
 </body>
 </html><?php }} ?>

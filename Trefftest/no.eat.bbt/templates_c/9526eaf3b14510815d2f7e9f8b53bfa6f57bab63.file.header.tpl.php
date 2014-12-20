@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.21-dev, created on 2014-12-18 18:02:02
+<?php /* Smarty version Smarty-3.1.21-dev, created on 2014-12-20 16:45:47
          compiled from "html\header.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:294325486f01b203a81-51716109%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '9526eaf3b14510815d2f7e9f8b53bfa6f57bab63' => 
     array (
       0 => 'html\\header.tpl',
-      1 => 1418921808,
+      1 => 1419090076,
       2 => 'file',
     ),
   ),
@@ -27,11 +27,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">  
 <link rel="shortcut icon" href="Content/favico.ico">
-<link rel="icon" href="Content/favico.ico" type="image/x-icon"/>
+<link rel="icon" href="../Content/favico.ico" type="image/x-icon"/>
 		 
 <title>Bobiltreff.no</title>
 <!-- stilark fra bootstrap -->
-<link href="css/bootstrap.css" rel="stylesheet">
+<link href="../css/bootstrap.css" rel="stylesheet">
 
 <!-- stilark fra bootstrap eksempler -->
 <!--<link href="css/jumbotron.css" rel="stylesheet">-->

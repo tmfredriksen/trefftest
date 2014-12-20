@@ -16,23 +16,6 @@ if(isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'])
 				
 				$smarty->display('html/opprettTreff.tpl');
 				
-				// Genialt eksempel:
-				// http://techstream.org/Web-Development/PHP/Dynamic-Form-Processing-with-PHP
-				/*	$chkbox = $_POST['chk'];                              // array
-					$bus = $_POST['bus'];
-					$day = $_POST['day'];
-					$month = $_POST['month'];
-					$mob = $_POST['mob'];
-					$type = $_POST['type'];
-					$from = $_POST['from'];
-					$to=$_POST['to'];
-					$root=$_POST['root'];
-					$BX_NAME=$_POST['BX_NAME'];        // array
-					$BX_age=$_POST['BX_age'];	   // array		
-					$BX_gender=$_POST['BX_gender'];    // array
-					$BX_birth=$_POST['BX_birth'];	   // array
-}				
-				 */
 				
 				if (isset ( $_POST ['btn_opprettTreff'] ))
 				{	
@@ -52,8 +35,25 @@ if(isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'])
 					$RegionID = strip_tags($_POST["region_id"]);
 					$BrukerID = $_SESSION['user']->getId();
 					
-					$databasehelper->opprettTreff($Treffnavn, $Startdato, $Sluttdato, $Sted, $Koordinater, $Plasser, $Treffavgift, $Kontonr, $Beskrivelse, $Paameldingsfrist, $Stromplasser, $Strompris, $isOk, $RegionID, $BrukerID);						
+					// Genialt eksempel:
+					// http://techstream.org/Web-Development/PHP/Dynamic-Form-Processing-with-PHP
+					$BX_NAME = $_POST['BX_NAME'];        // array
+					$BX_desc = $_POST['BX_desc'];	   // array
+					$BX_price = $_POST['BX_price'];    // array				 
+					
+					//$databasehelper->opprettTreff($Treffnavn, $Startdato, $Sluttdato, $Sted, $Koordinater, $Plasser, $Treffavgift, $Kontonr, $Beskrivelse, $Paameldingsfrist, $Stromplasser, $Strompris, $isOk, $RegionID, $BrukerID);						
 					$smarty->assign('melding', 'Treff opprettet');
+					// debug
+					
+					foreach($BX_NAME as $a => $b){
+						echo "<hr/>";
+						echo $a+1;
+						echo $BX_NAME[$a];
+						echo "<hr/>";
+						echo $BX_desc[$a];
+						echo "<hr/>";
+						echo $BX_price[$a];
+					}
 				}
 				
 }

@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.21-dev, created on 2014-12-18 19:40:32
+<?php /* Smarty version Smarty-3.1.21-dev, created on 2014-12-20 16:52:41
          compiled from "html\visTreff.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:2285554931fa06e8d98-41593487%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '0221dc8831464cb3b40cb166a0864b2dde1d7cfd' => 
     array (
       0 => 'html\\visTreff.tpl',
-      1 => 1418928014,
+      1 => 1419090076,
       2 => 'file',
     ),
   ),
@@ -15,19 +15,19 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.21-dev',
+  'unifunc' => 'content_54931fa07eaad9_99221323',
   'variables' => 
   array (
     'treff' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.21-dev',
-  'unifunc' => 'content_54931fa07eaad9_99221323',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_54931fa07eaad9_99221323')) {function content_54931fa07eaad9_99221323($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ('html/header.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
 
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <br/><br/>
-<table>
+<table class="table">
 	<tr>
 		<th>Navn: 
 		</th>
@@ -127,7 +127,10 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 </table>
 
 
-<a href="[lenke til påmelding]"><button class="btn btn-info">Til påmelding</button></a>
+
+
+<a href="paamelding.php?treffID=<?php echo $_smarty_tpl->tpl_vars['treff']->value->getId();?>
+"><button class="btn btn-info">Til påmelding</button></a>
 
 <?php echo $_smarty_tpl->getSubTemplate ('html/footer.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
 <?php }} ?>

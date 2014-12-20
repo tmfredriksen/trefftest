@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.21-dev, created on 2014-12-18 21:59:33
+<?php /* Smarty version Smarty-3.1.21-dev, created on 2014-12-20 17:39:50
          compiled from "html\opprettTreff.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:2118654932f842c1067-31975790%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '3e0b5d88080c8bf1535b174d8f8ad0aac5c3fe8c' => 
     array (
       0 => 'html\\opprettTreff.tpl',
-      1 => 1418936371,
+      1 => 1419093585,
       2 => 'file',
     ),
   ),
@@ -91,6 +91,40 @@ $_smarty_tpl->tpl_vars['region']->_loop = true;
 
 
 	<label></label><br>
+	<!-- Script for å generere nye aktivitetsfelt (WIP)-->
+	<p> 
+  		<input type="button" value="Legg til aktivitet" onClick="addRow()" />
+
+	</p>
+
+<div id="aktiviteter"></div>
+
+<!-- dæsken kor rått-->
+<?php echo '<script'; ?>
+ src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js">
+// Bruker Google sin jQuery
+<?php echo '</script'; ?>
+>
+
+<?php echo '<script'; ?>
+ type="text/javascript">
+
+var rowNum = 0;
+rowNum++;
+
+function addRow() {
+	var row = '<p id="rowNum' + rowNum + '"><label>Navn p&aring; aktivitet</label><input type="text" name="BX_NAME[]"><label>Beskrivelse</label>'
+	+ '<input type="text" class="small"  name="BX_desc[]"><label>Pris</label><input type="number" class="small" name="BX_price[]">'
+	+ '<input class="btn btn-danger" type="button" value="Fjern denne aktiviteten" onClick="deleteRow(' + rowNum + ');"/></p>';
+	$('#aktiviteter').append(row);
+	
+}
+
+function deleteRow(rowId) {
+	$('#rowNum' + rowId).remove();
+}
+<?php echo '</script'; ?>
+>
 
 	<input class="btn btn-success" type="submit" name="btn_opprettTreff" value="Opprett treff" />
 </form>
