@@ -22,7 +22,7 @@
 			{else}
 				<!-- Logget inn som treffansvarlig -->
 				<p>Du er logget inn som treffansvarlig. Trykk på Opprett Treff for å opprette
-				et nytt treff.</p>
+				et nytt treff. Er det spørsmål eller problemer, kontakter du: stein.gamst@gmail.com</p>
 			{/if}
 		{/if}
 	{else}

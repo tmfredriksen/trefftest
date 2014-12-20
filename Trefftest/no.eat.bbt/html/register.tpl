@@ -17,40 +17,54 @@ function checkPasswordMatch() {
 
 <div class='container'>
 	<div class='jumbotron'>
-		<div class="text-center">
+		<div class="center" align="center">
 
-			<form method="post" action="register.php" name="registerform">
-				<label for="brukernavn">Navn</label> <br> <input
-					id="brukernavn" type="text" name="brukernavn" required /><br>
+			<form method="post" role="form" action="register.php"
+				name="registerform">
+				<div class="form-group col-md-4">
 
-				<label for="bruker_epost">Epost</label><br> <input
-					id="bruker_epost" type="email" name="bruker_epost" required /><br>
-
-				<label for="bruker_tlf">Telefon</label><br> <input
-					id="bruker_tlf" type="number" name="bruker_tlf" required /><br>
-
-				<label for="bruker_adresse">Adresse</label><br> <input
-					id="bruker_adresse" type="text" name="bruker_adresse" required /><br>
-
-				<label for="bruker_postnr">Postnr</label><br> <input
-					id="bruker_postnr" type="number" name="bruker_postnr" required /><br>
-
-				<label for="bruker_sted">Sted</label><br> <input
-					id="bruker_sted" type="text" name="bruker_sted" required /><br>
-
-				<label for="user_password_new">Passord</label><br> <input
-					id="user_password_new" onkeyup="checkPasswordMatch();" type="password" name="user_password_new"
-					required autocomplete="off" /> <br> 
-				<label for="user_password_repeat">Gjenta Passord</label><br> <input
-					id="user_password_repeat" type="password" onkeyup="checkPasswordMatch();"
-					name="user_password_repeat" required autocomplete="off" /> <br>
-				<span class="registrationFormAlert" id="divCheckPasswordMatch"></span>
-				<br />
-				<input
-					class="btn btn-success" type="submit" name="btn_register"
+					<input placeholder="Navn" id="brukernavn" class="form-control"
+						type="text" name="brukernavn" required /><br>
+				</div>
+				<div class="form-group col-md-4">
+					<input placeholder="Epost" id="bruker_epost" class="form-control"
+						type="email" name="bruker_epost" required /><br>
+				</div>
+				<div class="form-group col-md-4">
+					<input id="bruker_tlf" placeholder="Telefon" class="form-control"
+						type="number" name="bruker_tlf" required /><br>
+				</div>
+				<div class="form-group col-md-4">
+					<input id="bruker_adresse" placeholder="Adresse"
+						class="form-control" type="text" name="bruker_adresse" required /><br>
+				</div>
+				<div class="form-group col-md-4">
+					<input id="bruker_postnr" placeholder="Postnr" type="number"
+						class="form-control" name="bruker_postnr" required /><br>
+				</div>
+				<div class="form-group col-md-4">
+					<input id="bruker_sted" placeholder="Sted" type="text"
+						name="bruker_sted" class="form-control" required /><br>
+				</div>
+				<div class="form-group col-md-4">
+					<input id="user_password_new" placeholder="Passord"
+						class="form-control" onkeyup="checkPasswordMatch();"
+						type="password" name="user_password_new" required
+						autocomplete="off" />
+				</div>
+				<br>
+				<div class="form-group col-md-4">
+					<input id="user_password_repeat" placeholder="Gjenta Passord"
+						class="form-control" type="password"
+						onkeyup="checkPasswordMatch();" name="user_password_repeat"
+						required autocomplete="off" /> <br> <span
+						class="registrationFormAlert" id="divCheckPasswordMatch"></span> <br />
+				</div>
+				
+				<input class="btn btn-success" type="submit" name="btn_register"
 					value="Opprett Bruker" />
-					
-			
+
+
 			</form>
 			{if (isset($melding))}
 			<h3>{$melding}</h3>

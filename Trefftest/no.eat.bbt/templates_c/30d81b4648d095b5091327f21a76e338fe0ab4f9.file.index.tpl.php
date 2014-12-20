@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.21-dev, created on 2014-12-18 21:17:24
+<?php /* Smarty version Smarty-3.1.21-dev, created on 2014-12-20 11:53:59
          compiled from "html\index.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:657454900a971ff604-65357145%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '30d81b4648d095b5091327f21a76e338fe0ab4f9' => 
     array (
       0 => 'html\\index.tpl',
-      1 => 1418933830,
+      1 => 1419072804,
       2 => 'file',
     ),
   ),
@@ -44,7 +44,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 			<?php } else { ?>
 				<!-- Logget inn som treffansvarlig -->
 				<p>Du er logget inn som treffansvarlig. Trykk på Opprett Treff for å opprette
-				et nytt treff.</p>
+				et nytt treff. Er det spørsmål eller problemer, kontakter du: stein.gamst@gmail.com</p>
 			<?php }?>
 		<?php }?>
 	<?php } else { ?>
