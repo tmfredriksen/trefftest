@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 class Bruker {
 	private $Id;
 	private $Navn;

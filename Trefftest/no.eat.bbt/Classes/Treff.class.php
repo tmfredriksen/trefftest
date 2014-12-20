@@ -1,4 +1,4 @@
-<?php
+ï»¿<?php
 class Treff {
 	private $Id;
 	private $Treffnavn;
@@ -136,9 +136,9 @@ class Treff {
 	public function toString() {
 		return "Navn: " . $this->Treffnavn . " | Sted: " . $this->Sted . " | Fra: " . $this->Startdato
 		. " | Til: " . $this->Sluttdato . " | Antall plasser: " . $this->Plasser . " | Treffavgift: kr"
-		. $this->Treffavgift . " til konto: " . $this->Kontonr . " | Påmeldingsfrist: "
-		. $this->Paameldingsfrist . " | Antall strømplasser: " . $this->Stromplasser
-		. " | Pris per døgn: " . $this->Strompris;
+		. $this->Treffavgift . " til konto: " . $this->Kontonr . " | PÃ¥meldingsfrist: "
+		. $this->Paameldingsfrist . " | Antall strÃ¸mplasser: " . $this->Stromplasser
+		. " | Pris per dÃ¸gn: " . $this->Strompris;
 	}
 	
 	// Bruk i regionvisning
@@ -146,8 +146,8 @@ class Treff {
 		return "<h2>" . $this->Treffnavn . ", " . $this->Sted . "</h2>"
 		. "<p>" . $this->Startdato . " - " . $this->Sluttdato . "<br/>" 
 		. "Treffavgift kr" . $this->Treffavgift . " pr person<br/>" 
-		. "Påmeldingsfrist: " . $this->Paameldingsfrist . "<br/><a href='visTreff.php?treffId=" 
-		. $this->Id . "'>Trykk for mer info og påmelding</a></p>";
+		. "PÃ¥meldingsfrist: " . $this->Paameldingsfrist . "<br/><a href='visTreff.php?treffId=" 
+		. $this->Id . "'>Trykk for mer info og pÃ¥melding</a></p>";
 	}
 }
 ?>
