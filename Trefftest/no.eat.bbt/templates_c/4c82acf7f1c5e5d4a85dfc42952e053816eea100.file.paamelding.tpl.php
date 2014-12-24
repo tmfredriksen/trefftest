@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.21-dev, created on 2014-12-19 19:17:41
+<?php /* Smarty version Smarty-3.1.21-dev, created on 2014-12-23 19:35:18
          compiled from "html\paamelding.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:1230154946bc507ebb8-89204689%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '4c82acf7f1c5e5d4a85dfc42952e053816eea100' => 
     array (
       0 => 'html\\paamelding.tpl',
-      1 => 1418938381,
+      1 => 1419259265,
       2 => 'file',
     ),
   ),
@@ -15,9 +15,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
-  'has_nocache_code' => false,
   'version' => 'Smarty-3.1.21-dev',
   'unifunc' => 'content_54946bc50ea271_39595941',
+  'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_54946bc50ea271_39595941')) {function content_54946bc50ea271_39595941($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ('html/header.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
 

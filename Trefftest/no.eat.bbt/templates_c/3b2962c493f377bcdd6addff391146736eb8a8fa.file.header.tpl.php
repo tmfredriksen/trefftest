@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.21-dev, created on 2014-12-20 12:01:08
+<?php /* Smarty version Smarty-3.1.21-dev, created on 2014-12-24 10:06:21
          compiled from "html\header.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:2794854900a97270aa1-51781615%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '3b2962c493f377bcdd6addff391146736eb8a8fa' => 
     array (
       0 => 'html\\header.tpl',
-      1 => 1419073259,
+      1 => 1419411976,
       2 => 'file',
     ),
   ),
@@ -37,4 +37,5 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 <!--<link href="css/jumbotron.css" rel="stylesheet">-->
 </head>
 
-<body><?php }} ?>
+<body style="background-color:#BFBFFF">
+<?php }} ?>

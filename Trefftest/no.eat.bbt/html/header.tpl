@@ -16,4 +16,4 @@
 <!--<link href="css/jumbotron.css" rel="stylesheet">-->
 </head>
 
-<body>
+<body style="background-color:#BFBFFF">
