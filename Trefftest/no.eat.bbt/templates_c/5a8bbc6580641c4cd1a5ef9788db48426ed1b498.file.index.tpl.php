@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.21-dev, created on 2014-12-18 21:16:13
+<?php /* Smarty version Smarty-3.1.21-dev, created on 2014-12-25 14:04:43
          compiled from "html/index.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:11615869235490935deea320-24186675%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '5a8bbc6580641c4cd1a5ef9788db48426ed1b498' => 
     array (
       0 => 'html/index.tpl',
-      1 => 1418932163,
+      1 => 1419512644,
       2 => 'file',
     ),
   ),
@@ -44,14 +44,15 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 			<?php } else { ?>
 				<!-- Logget inn som treffansvarlig -->
 				<p>Du er logget inn som treffansvarlig. Trykk på Opprett Treff for å opprette
-				et nytt treff.</p>
+				et nytt treff.<br/>Er det spørsmål eller problemer, kontakter du <a href="mailto:stein.gamst@gmail.com">stein.gamst@gmail.com</a></p>
 			<?php }?>
 		<?php }?>
 	<?php } else { ?>
 		<!-- Vanlig bruker -->
-		<p>Hvordan bruke siden ? Trykk på din Region og alle treff som er registrert vil da
-		vises. Trykk deretter på det treff som dere ønsker å melde dere på og
-		fyll inn de opplysninger som det spørres etter.</p>
+		<h3>Hvordan bruke siden?</h3>
+		<p>Trykk på din Region og alle treff som er registrert vil da vises.
+		<br/>Trykk deretter på det treff som dere ønsker å melde dere på og
+		<br/>fyll inn de opplysninger som det spørres etter.</p>
 
 	<?php }?>
 </div>

@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.21-dev, created on 2014-12-18 20:20:20
+<?php /* Smarty version Smarty-3.1.21-dev, created on 2014-12-19 10:45:37
          compiled from "html/opprettTreff.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:937781789549329fa79fb21-27447836%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '94abbe08928d4fc269a4a3481a73ef15cd50ce71' => 
     array (
       0 => 'html/opprettTreff.tpl',
-      1 => 1418933989,
+      1 => 1418937938,
       2 => 'file',
     ),
   ),
@@ -17,6 +17,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'version' => 'Smarty-3.1.21-dev',
   'unifunc' => 'content_549329fa7d62a3_67655216',
+  'variables' => 
+  array (
+    'regionListe' => 0,
+    'region' => 0,
+  ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_549329fa7d62a3_67655216')) {function content_549329fa7d62a3_67655216($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ('html/header.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
@@ -43,8 +48,25 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 	<label for="sted">Sted</label><br>
 	<input id="sted" type="text" name="sted" required /><br>
 	
+	<label for="regionId">Region</label><br>
+	<select name="region_id" required>
+    	<option value='' selected>-- Velg region --</option>
+    	<?php  $_smarty_tpl->tpl_vars['region'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['region']->_loop = false;
+ $_smarty_tpl->tpl_vars['key'] = new Smarty_Variable;
+ $_from = $_smarty_tpl->tpl_vars['regionListe']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['region']->key => $_smarty_tpl->tpl_vars['region']->value) {
+$_smarty_tpl->tpl_vars['region']->_loop = true;
+ $_smarty_tpl->tpl_vars['key']->value = $_smarty_tpl->tpl_vars['region']->key;
+?>
+    		<option value='<?php echo $_smarty_tpl->tpl_vars['region']->value->getId();?>
+'>Region <?php echo $_smarty_tpl->tpl_vars['region']->value->getRegionnavn();?>
+</option>
+		<?php } ?>
+	</select>
+	<label></label><br>
+	
 	<label for="koordinater">Koordinater</label><br>
-	<input id="koordinater" type="text" name="koordinater" required /><br>
+	<input id="koordinater" type="text" name="koordinater" /><br>
 	
 	<label for="plasser">Plasser</label><br>
 	<input id="plasser" type="number" name="plasser" required /><br>

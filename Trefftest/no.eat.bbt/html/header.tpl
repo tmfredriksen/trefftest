@@ -10,7 +10,7 @@
 		 
 <title>Bobiltreff.no</title>
 <!-- stilark fra bootstrap -->
-<link href="../css/bootstrap.css" rel="stylesheet">
+<link href="css/bootstrap.css" rel="stylesheet">
 
 <!-- stilark fra bootstrap eksempler -->
 <!--<link href="css/jumbotron.css" rel="stylesheet">-->
