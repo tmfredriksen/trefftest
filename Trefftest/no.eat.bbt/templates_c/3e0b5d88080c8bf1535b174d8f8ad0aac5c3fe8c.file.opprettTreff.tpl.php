@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.21-dev, created on 2014-12-20 17:56:16
+<?php /* Smarty version Smarty-3.1.21-dev, created on 2014-12-20 21:18:37
          compiled from "html\opprettTreff.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:2118654932f842c1067-31975790%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '3e0b5d88080c8bf1535b174d8f8ad0aac5c3fe8c' => 
     array (
       0 => 'html\\opprettTreff.tpl',
-      1 => 1419093828,
+      1 => 1419106682,
       2 => 'file',
     ),
   ),
@@ -112,9 +112,10 @@ $_smarty_tpl->tpl_vars['region']->_loop = true;
  type="text/javascript">
 
 var rowNum = 0;
-rowNum++;
+
 // Fikser css senere...
 function addRow() {
+	rowNum++;
 	var row = '<p id="rowNum' + rowNum + '"><label>Navn p&aring; aktivitet</label><input type="text" name="BX_NAME[]"><label>Beskrivelse</label>'
 	+ '<input type="text" class="small" name="BX_desc[]"><label>Pris</label><input type="number" class="small" name="BX_price[]">'
 	+ '<input class="btn btn-danger" type="button" value="Fjern denne aktiviteten" onClick="deleteRow(' + rowNum + ');"/></p>';

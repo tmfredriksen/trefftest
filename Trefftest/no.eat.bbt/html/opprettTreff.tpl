@@ -1,4 +1,4 @@
-﻿{include file='html/header.tpl'}
+{include file='html/header.tpl'}
 {include file='html/navbar.tpl'}
 
 <br /><br />
@@ -44,25 +44,25 @@
 	<label for="beskrivelse">Beskrivelse</label><br>
 	<input id="beskrivelse" type="text" name="beskrivelse" /><br/>
 	
-	<label for="paameldingsfrist">PÃ¥meldingsfrist(yyyymmdd)</label><br>
+	<label for="paameldingsfrist">Påmeldingsfrist(yyyymmdd)</label><br>
 	<input id="paameldingsfrist" type="date" name="paameldingsfrist" required /><br>
 	
-	<label for="stromplasser">StrÃ¸mplasser</label><br>
+	<label for="stromplasser">Strømplasser</label><br>
 	<input id="stromplasser" type="text" name="stromplasser" /><br/>
 	
-	<label for="strompris">"StrÃ¸mpris"</label><br>
+	<label for="strompris">"Strømpris"</label><br>
 	<input id="strompris" type="number" name="strompris" /><br/>
 
 
 	<label></label><br>
-	<!-- Script for å generere nye aktivitetsfelt (innmari bra)-->
+	<!-- Script for � generere nye aktivitetsfelt (innmari bra)-->
 	<p> 
   		<input type="button" value="Legg til aktivitet" onClick="addRow()" />
 	</p>
 
 <div id="aktiviteter"></div>
 
-<!-- dæsken kor rått-->
+<!-- d�sken kor r�tt-->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js">
 // Kode fra http://www.infotuts.com/dynamically-add-input-fields-to-form-jquery/,
 // http://blog.calendarscripts.info/dynamically-adding-input-form-fields-with-jquery/ og
@@ -73,9 +73,10 @@
 <script type="text/javascript">
 
 var rowNum = 0;
-rowNum++;
+
 // Fikser css senere...
 function addRow() {
+	rowNum++;
 	var row = '<p id="rowNum' + rowNum + '"><label>Navn p&aring; aktivitet</label><input type="text" name="BX_NAME[]"><label>Beskrivelse</label>'
 	+ '<input type="text" class="small" name="BX_desc[]"><label>Pris</label><input type="number" class="small" name="BX_price[]">'
 	+ '<input class="btn btn-danger" type="button" value="Fjern denne aktiviteten" onClick="deleteRow(' + rowNum + ');"/></p>';
