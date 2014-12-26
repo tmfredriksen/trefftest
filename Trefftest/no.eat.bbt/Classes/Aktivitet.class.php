@@ -1,5 +1,8 @@
 ﻿<?php
 class Aktivitet {
+	private $id;
+	    
+
 	private $Navn;
 	private $Beskrivelse;
 	private $Pris;
@@ -10,6 +13,16 @@ class Aktivitet {
 		$this->Beskrivelse = $Beskrivelse;
 		$this->Pris = $Pris;
 		$this->TreffId = $TreffId;
+	}
+	
+	public function getid()
+	{
+		return $this->id;
+	}
+	
+	public function setid($value)
+	{
+		$this->id = $value;
 	}
 	
 	public function getTreffId() 

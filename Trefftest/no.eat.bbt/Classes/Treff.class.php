@@ -143,10 +143,16 @@ class Treff {
 	
 	// Bruk i regionvisning
 	public function toRegionString() {
+		// Setter opp datoformat
+		$dateStart = new DateTime($this->Startdato);
+		$dateSlutt = new DateTime($this->Sluttdato);
+		$datePaam = new DateTime($this->Paameldingsfrist);
+		
+		//echo ;
 		return "<h2>" . $this->Treffnavn . ", " . $this->Sted . "</h2>"
-		. "<p>" . $this->Startdato . " - " . $this->Sluttdato . "<br/>" 
+		. "<p>" . $dateStart->format('j M Y') . " - " . $dateSlutt->format('j M Y') . "<br/>" 
 		. "Treffavgift kr" . $this->Treffavgift . " pr person<br/>" 
-		. "Påmeldingsfrist: " . $this->Paameldingsfrist . "<br/><a href='visTreff.php?treffId=" 
+		. "Påmeldingsfrist: " . $datePaam->format('j M Y') . "<br/><a href='visTreff.php?treffId=" 
 		. $this->Id . "'>Trykk for mer info og påmelding</a></p>";
 	}
 }

@@ -88,7 +88,19 @@
 	</tr>
 </table>
 
-
+{if ($aktiviteter)}
+	<h2>Aktiviteter:</h2>
+	{foreach key=key from=$aktiviteter item=aktivitet}
+		<h4>{$aktivitet->getNavn()}</h4>
+		<p>
+		<br/>
+		{$aktivitet->getBeskrivelse()}
+		<br/>
+		Pris: {$aktivitet->getPris()}
+		</p>
+		<hr/>
+	{/foreach}
+{/if}
 
 
 <a href="paamelding.php?treffID={$treff->getId()}"><button class="btn btn-info">Til påmelding</button></a>

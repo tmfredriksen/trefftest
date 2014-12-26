@@ -15,8 +15,10 @@ $treffId = $_GET["treffId"];
 $databasehelper = new databasehelper();
 	
 $treff = $databasehelper->getTreff($treffId);
-	
+
+$aktiviteter = $databasehelper->getAktiviteterForTreff($treffId);
 $smarty->assign('treff', $treff);
+$smarty->assign('aktiviteter', $aktiviteter);
 $smarty->display('html/visTreff.tpl');
 
 ?>

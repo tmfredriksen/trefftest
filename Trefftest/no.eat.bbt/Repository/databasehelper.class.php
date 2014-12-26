@@ -3,6 +3,7 @@
 include_once ('../no.eat.bbt/Classes/Bruker.class.php');
 include_once ('../no.eat.bbt/Classes/Treff.class.php');
 include_once ('../no.eat.bbt/Classes/Region.class.php');
+include_once ('../no.eat.bbt/Classes/Aktivitet.class.php');
 include_once ('HashHelper.php');
 class databasehelper {
 	
@@ -213,7 +214,9 @@ class databasehelper {
 		
 		}
 		
-		$stmt = $db->prepare ( "SELECT * FROM Treff WHERE RegionId = ?" );
+		// Henter treff som er: i regionen, godkjent og ikke har gått ut på dato
+		// yo http://stackoverflow.com/questions/1427469/compare-dates-in-t-sql-ignoring-the-time-part
+		$stmt = $db->prepare ( "SELECT * FROM Treff WHERE RegionId = ? AND isOk = 1 AND Paameldingsfrist >= cast(current_timestamp as date)  ORDER BY Paameldingsfrist ASC" );
 		$regionId = $db->real_escape_string ( $id ); // Vasker input
 		$stmt->bind_param ( 'i', $regionId );
 		// Oppretter tomt array
@@ -259,8 +262,45 @@ class databasehelper {
 		}
 	}
 	
-	public function opprettAktivitet($navn, $besk, $pris) {
+	public function opprettAktivitet($treffId, $navn, $besk, $pris) {
+		$db = new mysqli ( $this->host, $this->username, $this->password, $this->dbname );
+		if ($db->connect_error) {
+			die ( 'Connect Error (' . $db->connect_errno . ') ' . $db->connect_error );
 		
+		}
+		
+		$stmt = $db->prepare("INSERT INTO Aktivitet (Navn, Pris, Beskrivelse, TreffId)
+		VALUES(?,?,?,?)");
+		$stmt->bind_param('sisi', $navn, $pris, $besk, $treffId) ;
+		
+		$stmt->execute();
+		$db->close();
+	}
+	
+	public function getAktiviteterForTreff($id) {
+		$db = new mysqli ( $this->host, $this->username, $this->password, $this->dbname );
+		if ($db->connect_error) {
+			die ( 'Connect Error (' . $db->connect_errno . ') ' . $db->connect_error );
+		
+		}
+
+		$stmt = $db->prepare ( "SELECT ID, Navn, Pris, Beskrivelse FROM Aktivitet WHERE TreffID = ?" );
+		$treffId = $db->real_escape_string ( $id ); // Vasker input
+		$stmt->bind_param ( 'i', $treffId );
+		// Oppretter tomt array
+		$result = [];
+		
+		$stmt->execute();
+		$stmt->bind_result($idb, $navn, $pris, $beskrivelse);
+			
+		while ($stmt->fetch()) {
+			$aktivitet = new Aktivitet($navn, $beskrivelse, $pris, $treffId);
+			$aktivitet->setId($idb);
+			array_push($result, $aktivitet);
+		}
+		
+		
+		return $result;
 	}
 }
 ?>

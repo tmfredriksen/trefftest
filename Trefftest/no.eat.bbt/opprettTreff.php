@@ -36,10 +36,10 @@ if(isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'])
 					$RegionID = strip_tags($_POST["region_id"]);
 					$BrukerID = $_SESSION['user']->getId();		 
 					
+					// Henter id til opprettet treff
 					$treffId = $databasehelper->opprettTreff($Treffnavn, $Startdato, $Sluttdato, $Sted, $Koordinater, $Plasser, $Treffavgift, $Kontonr, $Beskrivelse, $Paameldingsfrist, $Stromplasser, $Strompris, $isOk, $RegionID, $BrukerID);						
 					$smarty->assign('melding', 'Treff opprettet');
 					// debug
-					echo "<br/>treffId vart " . $treffId;
 					// Genialt eksempel:
 					// http://techstream.org/Web-Development/PHP/Dynamic-Form-Processing-with-PHP
 					if (isset($_POST['BX_NAME'])) {
@@ -48,13 +48,7 @@ if(isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'])
 						$BX_price = $_POST['BX_price'];    // array
 						
 						foreach($BX_NAME as $a => $b){
-							echo "<hr/>";
-							echo $a+1;
-							echo $BX_NAME[$a];
-							echo "<hr/>";
-							echo $BX_desc[$a];
-							echo "<hr/>";
-							echo $BX_price[$a];
+							$databasehelper->opprettAktivitet($treffId, $BX_NAME[$a], $BX_desc[$a], $BX_price[$a]);
 						}
 					}
 					

@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.21-dev, created on 2014-12-20 18:20:04
+<?php /* Smarty version Smarty-3.1.21-dev, created on 2014-12-26 19:53:18
          compiled from "html\visTreff.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:2285554931fa06e8d98-41593487%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '0221dc8831464cb3b40cb166a0864b2dde1d7cfd' => 
     array (
       0 => 'html\\visTreff.tpl',
-      1 => 1419095813,
+      1 => 1419619996,
       2 => 'file',
     ),
   ),
@@ -20,6 +20,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'variables' => 
   array (
     'treff' => 0,
+    'aktiviteter' => 0,
+    'aktivitet' => 0,
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
@@ -126,7 +128,28 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 	</tr>
 </table>
 
+<?php if (($_smarty_tpl->tpl_vars['aktiviteter']->value)) {?>
+	<h2>Aktiviteter:</h2>
+	<?php  $_smarty_tpl->tpl_vars['aktivitet'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['aktivitet']->_loop = false;
+ $_smarty_tpl->tpl_vars['key'] = new Smarty_Variable;
+ $_from = $_smarty_tpl->tpl_vars['aktiviteter']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['aktivitet']->key => $_smarty_tpl->tpl_vars['aktivitet']->value) {
+$_smarty_tpl->tpl_vars['aktivitet']->_loop = true;
+ $_smarty_tpl->tpl_vars['key']->value = $_smarty_tpl->tpl_vars['aktivitet']->key;
+?>
+		<h4><?php echo $_smarty_tpl->tpl_vars['aktivitet']->value->getNavn();?>
+</h4>
+		<p>
+		<br/>
+		<?php echo $_smarty_tpl->tpl_vars['aktivitet']->value->getBeskrivelse();?>
 
+		<br/>
+		Pris: <?php echo $_smarty_tpl->tpl_vars['aktivitet']->value->getPris();?>
+
+		</p>
+		<hr/>
+	<?php } ?>
+<?php }?>
 
 
 <a href="paamelding.php?treffID=<?php echo $_smarty_tpl->tpl_vars['treff']->value->getId();?>
