@@ -137,6 +137,7 @@ class databasehelper {
 		
 	}
 	
+	// Han returnerer id'en til treffet som ble opprettet
 	public function opprettTreff($Treffnavn, $Startdato, $Sluttdato, $Sted, $Koordinater, $Plasser, $Treffavgift,
 			$Kontonr, $Beskrivelse, $Paameldingsfrist, $Stromplasser, $Strompris, $isOk, $RegionID, $BrukerID) {
 	
@@ -155,6 +156,8 @@ class databasehelper {
 	
 		$stmt->execute();
 		$db->close();
+		 //http://php.net/manual/en/mysqli.insert-id.php, får id'en til sist innsatte innlegg
+		return $stmt->insert_id;
 	
 	}
 	
@@ -254,6 +257,10 @@ class databasehelper {
 		
 			return null;
 		}
+	}
+	
+	public function opprettAktivitet($navn, $besk, $pris) {
+		
 	}
 }
 ?>

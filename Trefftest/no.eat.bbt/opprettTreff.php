@@ -1,6 +1,7 @@
 <?php
 include_once ('libs/Smarty.class.php');
 include_once ('Classes/Bruker.class.php');
+include_once ('Classes/Aktivitet.class.php');
 include_once ('init.php');
 include_once ('Repository/databasehelper.class.php');
 include_once ('Repository/HashHelper.php');
@@ -33,27 +34,30 @@ if(isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'])
 					$Strompris = strip_tags($_POST["strompris"]);
 					$isOk = 0;
 					$RegionID = strip_tags($_POST["region_id"]);
-					$BrukerID = $_SESSION['user']->getId();
+					$BrukerID = $_SESSION['user']->getId();		 
 					
-					// Genialt eksempel:
-					// http://techstream.org/Web-Development/PHP/Dynamic-Form-Processing-with-PHP
-					$BX_NAME = $_POST['BX_NAME'];        // array
-					$BX_desc = $_POST['BX_desc'];	   // array
-					$BX_price = $_POST['BX_price'];    // array				 
-					
-					//$databasehelper->opprettTreff($Treffnavn, $Startdato, $Sluttdato, $Sted, $Koordinater, $Plasser, $Treffavgift, $Kontonr, $Beskrivelse, $Paameldingsfrist, $Stromplasser, $Strompris, $isOk, $RegionID, $BrukerID);						
+					$treffId = $databasehelper->opprettTreff($Treffnavn, $Startdato, $Sluttdato, $Sted, $Koordinater, $Plasser, $Treffavgift, $Kontonr, $Beskrivelse, $Paameldingsfrist, $Stromplasser, $Strompris, $isOk, $RegionID, $BrukerID);						
 					$smarty->assign('melding', 'Treff opprettet');
 					// debug
-					
-					foreach($BX_NAME as $a => $b){
-						echo "<hr/>";
-						echo $a+1;
-						echo $BX_NAME[$a];
-						echo "<hr/>";
-						echo $BX_desc[$a];
-						echo "<hr/>";
-						echo $BX_price[$a];
+					echo "<br/>treffId vart " . $treffId;
+					// Genialt eksempel:
+					// http://techstream.org/Web-Development/PHP/Dynamic-Form-Processing-with-PHP
+					if (isset($_POST['BX_NAME'])) {
+						$BX_NAME = $_POST['BX_NAME'];        // array
+						$BX_desc = $_POST['BX_desc'];	   // array
+						$BX_price = $_POST['BX_price'];    // array
+						
+						foreach($BX_NAME as $a => $b){
+							echo "<hr/>";
+							echo $a+1;
+							echo $BX_NAME[$a];
+							echo "<hr/>";
+							echo $BX_desc[$a];
+							echo "<hr/>";
+							echo $BX_price[$a];
+						}
 					}
+					
 				}
 				
 }
